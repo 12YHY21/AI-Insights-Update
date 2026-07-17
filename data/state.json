@@ -1,5 +1,566 @@
 {
   "version": 1,
-  "last_success_at": null,
-  "items": {}
+  "last_success_at": "2026-07-17T03:30:42.950345+00:00",
+  "items": {
+    "fe44f961306e2acba1b6": {
+      "title": "Q&A: How Capcom Brought Path Tracing to RE ENGINE Across PRAGMATA and Resident Evil Requiem",
+      "url": "https://developer.nvidia.com/blog/qa-how-capcom-brought-path-tracing-to-re-engine-across-pragmata-and-resident-evil-requiem",
+      "source": "NVIDIA Technical Blog",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "980d749ecfc6165f5b0b": {
+      "title": "NVIDIA Nemotron 3 Embed Ranks #1 Overall on RTEB, Advancing Agentic Retrieval",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb",
+      "source": "Hugging Face",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "a907415b440a72c97ae1": {
+      "title": "Why teens deserve access to safe AI",
+      "url": "https://openai.com/index/why-teens-deserve-access-safe-ai",
+      "source": "OpenAI",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "16e13c52f7cd02d4ace3": {
+      "title": "Our approach to bioresilience",
+      "url": "https://deepmind.google/blog/our-approach-to-bioresilience",
+      "source": "Google DeepMind",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "4ce771a5a8c14828790b": {
+      "title": "Scaling Point-in-Time Language Models",
+      "url": "https://arxiv.org/abs/2607.11889",
+      "source": "arXiv cs.CL",
+      "selected": true,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "fb8ca7f6fb60aebda1ee": {
+      "title": "Autonomous UAV Route Planning for Coverage Maximization in Environmental Monitoring: A Systematic Literature Review",
+      "url": "https://arxiv.org/abs/2607.13054",
+      "source": "arXiv cs.RO",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "66eb3971c2909cf0e39b": {
+      "title": "C-Norm: Cell-Distribution Normalization Enables Precision Recognition of Medical-Cell Image",
+      "url": "https://arxiv.org/abs/2607.13116",
+      "source": "arXiv cs.CV",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "d22745a3d790599a2285": {
+      "title": "OriginBlame: Record- and Token-Level Data Provenance for AI Training Datasets",
+      "url": "https://arxiv.org/abs/2607.13037",
+      "source": "arXiv cs.AI",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "7e6a6410719e8d00a1be": {
+      "title": "Automatic Differentiation from Scratch: How PyTorch Computes Gradients in Physics-Informed Neural Networks",
+      "url": "https://arxiv.org/abs/2607.13042",
+      "source": "arXiv cs.LG",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "08e7f0a2873ef5503ea2": {
+      "title": "Integrating Context-Aware Video AI Agents Into Enterprise Workflows",
+      "url": "https://developer.nvidia.com/blog/integrating-context-aware-video-ai-agents-into-enterprise-workflows",
+      "source": "NVIDIA Technical Blog",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "c5c3971a8972616617d3": {
+      "title": "Newer Models, Same Advantage",
+      "url": "https://huggingface.co/blog/Dharma-AI/newer-models-same-advantages",
+      "source": "Hugging Face",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "22db2c8a4ea0ed6ad927": {
+      "title": "CANDI: Contextual Alignment for Niche Domains Question Answering",
+      "url": "https://arxiv.org/abs/2607.11891",
+      "source": "arXiv cs.CL",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "a54231458e592f6c85a0": {
+      "title": "HRIBench: Benchmarking Interaction-Centric Human-Robot Collaboration",
+      "url": "https://arxiv.org/abs/2607.13056",
+      "source": "arXiv cs.RO",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "d6b84905643bd456bced": {
+      "title": "Boogu-Image-0.1: Boosting Open-Source Unified Multimodal Understanding and Generation",
+      "url": "https://arxiv.org/abs/2607.13125",
+      "source": "arXiv cs.CV",
+      "selected": true,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "e4f51b531a08f3691fcb": {
+      "title": "SPINE: Bridging the Cyber-Physical Gap with Agentic AI",
+      "url": "https://arxiv.org/abs/2607.13049",
+      "source": "arXiv cs.AI",
+      "selected": true,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "d257a15341c898ddf8ff": {
+      "title": "Beyond Backbone Backpropagation: A Decoupled Strategy for Efficient Transfer Learning",
+      "url": "https://arxiv.org/abs/2607.13043",
+      "source": "arXiv cs.LG",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "f47e8f0dcf67a37eae93": {
+      "title": "How Cars24 scales conversations and builds faster with OpenAI",
+      "url": "https://openai.com/index/cars24",
+      "source": "OpenAI",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "13a6d9819972b9b7d709": {
+      "title": "Empowering India’s next generation of innovators with ATL Saathi",
+      "url": "https://deepmind.google/blog/empowering-indias-next-generation-of-innovators-with-atl-saathi",
+      "source": "Google DeepMind",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "f7e3670c88072fee6115": {
+      "title": "Scaling Agentic AI Factories Through Extreme Co-Design with NVIDIA BlueField",
+      "url": "https://developer.nvidia.com/blog/scaling-agentic-ai-factories-through-extreme-co-design-with-nvidia-bluefield",
+      "source": "NVIDIA Technical Blog",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "4a00a964834a3f0230f3": {
+      "title": "G-SHARE: A Guideline-Based Structured Reasoning Framework for Human-Factor Event Diagnosis",
+      "url": "https://arxiv.org/abs/2607.11892",
+      "source": "arXiv cs.CL",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "1cb0fec29f433878744d": {
+      "title": "Power from Potential: A Survey of Electrostatic Actuators for Haptics",
+      "url": "https://arxiv.org/abs/2607.13058",
+      "source": "arXiv cs.RO",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "80ecb2714cf1368ae8cf": {
+      "title": "A Masked Autoencoder Approach to Unsupervised Steel Surface Defect Recognition",
+      "url": "https://arxiv.org/abs/2607.13178",
+      "source": "arXiv cs.CV",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "73892c97d0078fdbfbd8": {
+      "title": "Interventional Grounding Audits: Black-Box Premise-Dependency Tests for LLM Chain-of-Thought via Predicate Substitution",
+      "url": "https://arxiv.org/abs/2607.13069",
+      "source": "arXiv cs.AI",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "2fc1f5841579795e2b61": {
+      "title": "Federated Explainable Artificial Intelligence: Roles, Architectures, Evaluation, and Open Challenges",
+      "url": "https://arxiv.org/abs/2607.13045",
+      "source": "arXiv cs.LG",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "f443de946cf38955186f": {
+      "title": "Security incident disclosure — July 2026",
+      "url": "https://huggingface.co/blog/security-incident-july-2026",
+      "source": "Hugging Face",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "23b1197c74335456a955": {
+      "title": "The US is advancing AI safety through state and federal action",
+      "url": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action",
+      "source": "OpenAI",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "70964cc2675b1fcdc16d": {
+      "title": "I'm Sorry, but I Can't Help with Braille: Revealing Accessibility Failures in State-of-the-Art LLMs",
+      "url": "https://arxiv.org/abs/2607.11893",
+      "source": "arXiv cs.CL",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "9b8bc87df5d461d61395": {
+      "title": "GPUSimBench: Towards Scalable and Reliable GPU-Accelerated Simulators in Embodied AI",
+      "url": "https://arxiv.org/abs/2607.13059",
+      "source": "arXiv cs.RO",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "42695bc78720d655a938": {
+      "title": "MGFace: Mask-Gated Face Matching via Conditional Similarity Routing",
+      "url": "https://arxiv.org/abs/2607.13187",
+      "source": "arXiv cs.CV",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "89507d969bc6fe85309b": {
+      "title": "Probabilistic Extension of Neuro-Symbolic AGI Robots based on Belnap's Typed Intensional FOL",
+      "url": "https://arxiv.org/abs/2607.13073",
+      "source": "arXiv cs.AI",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "7de80ef2a868fca4a085": {
+      "title": "What Your Model Threw Away and Why You'll Want It Back: Masking, Fingerprinting, and Privacy from Discarded Geometry",
+      "url": "https://arxiv.org/abs/2607.13046",
+      "source": "arXiv cs.LG",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "002d27c8a35112737e86": {
+      "title": "Build a Multi-Camera 3D Tracking Application with NVIDIA DeepStream 9.1 Skills",
+      "url": "https://developer.nvidia.com/blog/build-a-multi-camera-3d-tracking-application-with-nvidia-deepstream-9-1-skills",
+      "source": "NVIDIA Technical Blog",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "11253d0d7f13833897b2": {
+      "title": "What building Shippy taught us about building agents",
+      "url": "https://huggingface.co/blog/allenai/shippy-tech-blog",
+      "source": "Hugging Face",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "f8df3e0d3cc81402169f": {
+      "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
+      "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
+      "source": "OpenAI",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "6a27ab8233ff41f6934c": {
+      "title": "Graph-Based Detection of Disinformation Narrative Diffusion between Russian and Ukrainian Telegram Channels",
+      "url": "https://arxiv.org/abs/2607.11894",
+      "source": "arXiv cs.CL",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "a8e9191142b5760b32dd": {
+      "title": "A Bayesian framework for the uncanny valley in humanoid robot design",
+      "url": "https://arxiv.org/abs/2607.13060",
+      "source": "arXiv cs.RO",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "65f969821d9706f025c6": {
+      "title": "Self-Supervised Visual Representation Learning: Pretrain-Finetuning or Joint Training?",
+      "url": "https://arxiv.org/abs/2607.13192",
+      "source": "arXiv cs.CV",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "971f11910c793d001619": {
+      "title": "Self-Improvements in Modern Agentic Systems: A Survey",
+      "url": "https://arxiv.org/abs/2607.13104",
+      "source": "arXiv cs.AI",
+      "selected": true,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "dcfa7a680ca287306fa0": {
+      "title": "Targeted Recovery of Weight-Space Mechanisms From Neural Networks",
+      "url": "https://arxiv.org/abs/2607.13047",
+      "source": "arXiv cs.LG",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "920ac4ce0da6c28a8127": {
+      "title": "Develop Lightweight USD Runtimes Faster with AI Agents",
+      "url": "https://developer.nvidia.com/blog/develop-lightweight-usd-runtimes-faster-with-ai-agents",
+      "source": "NVIDIA Technical Blog",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "969cdff003616d877728": {
+      "title": "Model Routing Is Simple. Until It Isn’t.",
+      "url": "https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt",
+      "source": "Hugging Face",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "0a5ca4c5b5238e08c45b": {
+      "title": "How to manage AI investments in the agentic era",
+      "url": "https://openai.com/index/managing-ai-investments-in-agentic-era",
+      "source": "OpenAI",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "fa0f1f255310c3cf54e8": {
+      "title": "TAKE: Trajectory-Aware Knowledge Estimation for Text Dataset Distillation",
+      "url": "https://arxiv.org/abs/2607.11898",
+      "source": "arXiv cs.CL",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "0a6a98e5077e667e081a": {
+      "title": "A 3DGS-Driven Dynamic Viewpoint and Vibrotactile Framework for Subsea Teleoperation Validated via fNIRS",
+      "url": "https://arxiv.org/abs/2607.13067",
+      "source": "arXiv cs.RO",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "fbf3b538f9a150c6abcf": {
+      "title": "Continuously Evolving Deepfake Detection: An Architecture and Public-Benchmark Evaluation of a Dynamic Detection System",
+      "url": "https://arxiv.org/abs/2607.13234",
+      "source": "arXiv cs.CV",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "96c2b90c03babb68d224": {
+      "title": "Improving Molecular Property Prediction in Small Language Models Using Graph-based Tools",
+      "url": "https://arxiv.org/abs/2607.13115",
+      "source": "arXiv cs.AI",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "2fccdf35ee0c75de08f4": {
+      "title": "Uncertainty-Aware Sequential Decision Rules for Event-Triggered LLM Invocation in Streaming Systems",
+      "url": "https://arxiv.org/abs/2607.13048",
+      "source": "arXiv cs.LG",
+      "selected": true,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "0917aeb6a1d0c7a4f3d9": {
+      "title": "Building Faster Cryptography with Carryless Multiplication in NVIDIA CUDA 13.3",
+      "url": "https://developer.nvidia.com/blog/building-faster-cryptography-with-carryless-multiplication-in-nvidia-cuda-13-3",
+      "source": "NVIDIA Technical Blog",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "7f36308856b0311fcff4": {
+      "title": "Welcome Inkling by Thinking Machines",
+      "url": "https://huggingface.co/blog/thinkingmachines-inkling",
+      "source": "Hugging Face",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "0090139282200a1d4cfa": {
+      "title": "How sales teams use ChatGPT Work",
+      "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
+      "source": "OpenAI",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "7195d4ebb83b1592c4b9": {
+      "title": "Transforming LLMs into Efficient Cross-Encoders via Knowledge Distillation for RAG Reranking",
+      "url": "https://arxiv.org/abs/2607.11933",
+      "source": "arXiv cs.CL",
+      "selected": true,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "e494a8c17e0e99fa9bc0": {
+      "title": "HRO: Hierarchical Room-to-Object Framework for Zero-Shot Object Goal Navigation with Large Language Models",
+      "url": "https://arxiv.org/abs/2607.13072",
+      "source": "arXiv cs.RO",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "e4a4c5f366deca1810f7": {
+      "title": "Active Learning for Efficient Annotation of Surgical Videos with Weak Supervision",
+      "url": "https://arxiv.org/abs/2607.13237",
+      "source": "arXiv cs.CV",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "4ce70f45c52c3c40be91": {
+      "title": "Oracle Agent Memory as an Enterprise Memory Substrate for Long-Horizon AI Agents",
+      "url": "https://arxiv.org/abs/2607.13157",
+      "source": "arXiv cs.AI",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "9bdfe65dda2a42cf3fb5": {
+      "title": "TSSM: Triaxial State Space Model for Global Station Weather Forecasting with Temporal-Variable-Historical Modeling",
+      "url": "https://arxiv.org/abs/2607.13101",
+      "source": "arXiv cs.LG",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "5e1ffb76943884fba9ea": {
+      "title": "Introducing Real World VoiceEQ: Measuring the human quality of voice AI",
+      "url": "https://huggingface.co/blog/real-world-voiceeq",
+      "source": "Hugging Face",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "079f76d66c90de049603": {
+      "title": "Lessons From the Leaderboard: What 5,000+ Kagglers Taught Us About Improving AI Reasoning",
+      "url": "https://developer.nvidia.com/blog/lessons-from-the-leaderboard-what-5000-kagglers-taught-us-about-improving-ai-reasoning",
+      "source": "NVIDIA Technical Blog",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "578b3bdf5cbf1347ed53": {
+      "title": "How data science teams use ChatGPT Work",
+      "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
+      "source": "OpenAI",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "2042f35d31723954f3fa": {
+      "title": "MAGE: Understanding Stability-Performance Trade-offs in Multi-component Prompt Optimization",
+      "url": "https://arxiv.org/abs/2607.11944",
+      "source": "arXiv cs.CL",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "2f7bf469075559649488": {
+      "title": "Worlds in One Demo: A Synthetic Data Engine for Learning Open-World Mobile Manipulation",
+      "url": "https://arxiv.org/abs/2607.13154",
+      "source": "arXiv cs.RO",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "2010dae8b33fa4dcc5d0": {
+      "title": "Just-In-Time Scene Graph Growth: Combating Perceptual Saturation in Long-Horizon Robotics",
+      "url": "https://arxiv.org/abs/2607.13245",
+      "source": "arXiv cs.CV",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "57a2b348d45cf3ed47c7": {
+      "title": "Learning Safe Agent Behaviour from Human Preferences and Justifications via World Models",
+      "url": "https://arxiv.org/abs/2607.13172",
+      "source": "arXiv cs.AI",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "d49bd854e537bf07b909": {
+      "title": "Disentangling Knowledge States with Ability and Proficiency Modeling for Knowledge Tracing",
+      "url": "https://arxiv.org/abs/2607.13103",
+      "source": "arXiv cs.LG",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "abaf97482f97144ed28d": {
+      "title": "How to Run an Autoresearch Workflow with RL Agent Skills and NVIDIA NeMo",
+      "url": "https://developer.nvidia.com/blog/how-to-run-an-autoresearch-workflow-with-rl-agent-skills-and-nvidia-nemo",
+      "source": "NVIDIA Technical Blog",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "521cb8f5727237af1c44": {
+      "title": "How Deutsche Telekom is rewiring telecommunications with AI",
+      "url": "https://openai.com/index/deutsche-telekom",
+      "source": "OpenAI",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "46480f5caf4a52684f85": {
+      "title": "Belief-reality separation lives in routing over a shared value slot in language models",
+      "url": "https://arxiv.org/abs/2607.11945",
+      "source": "arXiv cs.CL",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "11bcd790c15fa00fd10d": {
+      "title": "Attitude Estimation Using Inertial and Barometric Measurements",
+      "url": "https://arxiv.org/abs/2607.13254",
+      "source": "arXiv cs.RO",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "0593963494ad9195b889": {
+      "title": "AffectFlow-DINO: Uncertainty-Aware Multi-Task Affect Estimation via Conditional Rectified Flow",
+      "url": "https://arxiv.org/abs/2607.13250",
+      "source": "arXiv cs.CV",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "9ad4a3aef4fcf82feb61": {
+      "title": "CayleyR: Solving the TopSpin puzzle via cycle intersection",
+      "url": "https://arxiv.org/abs/2607.13219",
+      "source": "arXiv cs.AI",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "8ca5af8adcc8e11a469a": {
+      "title": "STKAN: Kolmogorov-Arnold Networks for Spatio-Temporal Forecasting",
+      "url": "https://arxiv.org/abs/2607.13108",
+      "source": "arXiv cs.LG",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "5dac9cc83a8f230c3d53": {
+      "title": "Post-Train NVIDIA Cosmos 3 in One Day Using Agent Skills",
+      "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-in-one-day-using-agent-skills",
+      "source": "NVIDIA Technical Blog",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "414b671e583934e73676": {
+      "title": "Hybrid Continual Learning for Low-Resource Australian Aboriginal Language Identification",
+      "url": "https://arxiv.org/abs/2607.11946",
+      "source": "arXiv cs.CL",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "cd085a7d4e7b53581147": {
+      "title": "Parsimonious disturbance-aware minimum-time planning with parametric uncertainty",
+      "url": "https://arxiv.org/abs/2607.13312",
+      "source": "arXiv cs.RO",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "7db9870ca9f90950b93e": {
+      "title": "Differentiable Polarized Path Tracing",
+      "url": "https://arxiv.org/abs/2607.13265",
+      "source": "arXiv cs.CV",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "56f4b5385a1bed0afbc3": {
+      "title": "Networked Intelligence: Active Shared Context Graphs for Human-AI Team Science",
+      "url": "https://arxiv.org/abs/2607.13220",
+      "source": "arXiv cs.AI",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "e00f4391b2f94d08976d": {
+      "title": "A Hybrid Mamba for Audio-Visual Navigation",
+      "url": "https://arxiv.org/abs/2607.13110",
+      "source": "arXiv cs.LG",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "46ac12ac63a9a8f00e78": {
+      "title": "NVIDIA Ising Decoding Cuts Color Code Logical Error Rates by Over 300X",
+      "url": "https://developer.nvidia.com/blog/nvidia-ising-decoding-cuts-color-code-logical-error-rates-by-over-300x",
+      "source": "NVIDIA Technical Blog",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "0af7e26842dce40d783a": {
+      "title": "Evaluating Nonuniform Dependability Across Response Conditions: A Conditional Generalizability Framework Illustrated in Automated Essay Scoring",
+      "url": "https://arxiv.org/abs/2607.11981",
+      "source": "arXiv cs.CL",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "beda41386b624d448757": {
+      "title": "Adapting Generalist Vehicle Models for High-Speed MPC Across Terrains",
+      "url": "https://arxiv.org/abs/2607.13319",
+      "source": "arXiv cs.RO",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    },
+    "8a5dbd471e20623f119d": {
+      "title": "FOLIO: Focused Semantic Memory for Streaming Video Understanding",
+      "url": "https://arxiv.org/abs/2607.13298",
+      "source": "arXiv cs.CV",
+      "selected": false,
+      "processed_at": "2026-07-17T03:30:42.950345+00:00"
+    }
+  }
 }
