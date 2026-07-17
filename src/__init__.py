@@ -1,0 +1,2 @@
+"""AI frontier digest package."""
+
