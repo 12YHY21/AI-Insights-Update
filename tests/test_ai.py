@@ -1,7 +1,12 @@
 import unittest
 from datetime import datetime, timezone
 
-from src.ai import _validate_rank_result, deduplicate_similar_titles, select_articles
+from src.ai import (
+    _validate_monthly_review,
+    _validate_rank_result,
+    deduplicate_similar_titles,
+    select_articles,
+)
 from src.models import Article
 
 
@@ -65,6 +70,30 @@ class SelectionTests(unittest.TestCase):
         }
         with self.assertRaisesRegex(ValueError, "也被标记为重复"):
             _validate_rank_result(result, {"a", "b", "c"}, True)
+
+    def test_monthly_validation_requires_new_major_news(self):
+        result = {
+            "executive_summary": "summary",
+            "themes": ["theme"],
+            "reviews": [
+                {
+                    "id": item_id,
+                    "importance_score": 8,
+                    "verdict": "仍属前沿",
+                    "reassessment": "still important",
+                    "latest_context": "confirmed",
+                    "recommendation": "follow",
+                }
+                for item_id in ("old", "new")
+            ],
+            "top_ids": ["old", "new"],
+            "major_news_ids": ["new"],
+            "watchlist": ["next"],
+        }
+        _validate_monthly_review(result, {"old", "new"}, {"new"}, {"old"})
+        result["major_news_ids"] = ["old"]
+        with self.assertRaisesRegex(ValueError, "无效 id"):
+            _validate_monthly_review(result, {"old", "new"}, {"new"}, {"old"})
 
     @staticmethod
     def _article(item_id: str, source: str, score: float, category: str = "论文") -> Article:

@@ -31,3 +31,25 @@ class ArticleSummary:
     findings: list[str] = field(default_factory=list)
     limitations: list[str] = field(default_factory=list)
     audience: str = ""
+
+
+@dataclass(slots=True)
+class MonthlyReviewItem:
+    article: Article
+    was_previously_sent: bool
+    importance_score: float
+    verdict: str
+    reassessment: str
+    latest_context: str
+    recommendation: str
+
+
+@dataclass(slots=True)
+class MonthlyReviewDigest:
+    period_label: str
+    executive_summary: str
+    themes: list[str]
+    reviews: list[MonthlyReviewItem]
+    top_ids: list[str]
+    major_news_ids: list[str]
+    watchlist: list[str]

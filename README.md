@@ -1,11 +1,12 @@
 # AI Insights Update
 
-每周一、周五自动采集 AI 前沿论文、官方动态与工程文章，通过 DeepSeek 完成两阶段筛选和中文技术总结，再推送到飞书群自定义机器人。
+每周一自动采集 AI 前沿论文、官方动态与工程文章；每月1日重新阅读上月推送并对照当月新闻做一次前沿性复盘，最后通过飞书群自定义机器人推送。
 
 ## 当前能力
 
-- 北京时间每周一、周五 `08:17` 自动运行，也支持手动 `collect-only`、`dry-run`、`send`。
-- 采集 arXiv、OpenAI、Google DeepMind、Anthropic、DeepSeek、Microsoft Research、Hugging Face、NVIDIA 等来源。
+- 北京时间每周一 `08:17` 发送周报，每月1日 `09:17` 发送上个自然月的复盘。
+- 如果每月1日恰好是周一，当天只发送月报，避免同一天收到两份内容。
+- 采集16个来源，包括 arXiv、OpenAI、Google/DeepMind、Anthropic、DeepSeek、Qwen、Microsoft、Hugging Face、GitHub、AWS 和 NVIDIA。
 - 先分批初筛，再将 Top 候选放进同一个上下文统一终审，避免不同批次分数不可比。
 - 严格校验 DeepSeek 返回的 JSON、文章 ID 和字段类型，返回不完整时自动重试。
 - 按论文、官方动态、开源工程和部署实践设置配额，避免简报被论文占满。
@@ -14,11 +15,12 @@
 - 飞书卡片分片可恢复：中途失败后记录已成功分片，下次从未完成位置继续。
 - 永久归档简报与运行报告，并记录来源健康、候选评分、淘汰原因和 Token 用量。
 - GitHub Actions 使用最小权限、步骤级 Secrets、锁定依赖哈希和完整 Action SHA。
+- 月报重新抓取此前推送的原文，并把基础模型重要版本、能力边界变化、训练/推理范式和显著成本变化列为高优先级；品牌宣传和普通客户案例不会仅因品牌获得高分。
 
 ## 工作流程
 
 ```text
-12 个 RSS / Sitemap 来源
+16 个 RSS / Sitemap 来源
         ↓
 48 小时重叠窗口 + 历史去重
         ↓
@@ -37,6 +39,8 @@ Top 20 + 各类别候选统一终审
 状态、简报、报告提交回仓库
 ```
 
+月报在此基础上读取上个自然月所有已推送条目，重新抓取原文，再从官方动态、开源工程和部署新闻中选出最多10条对照材料。DeepSeek 会为每项给出“仍属前沿 / 重要但已常规 / 影响有限 / 待验证”结论，并生成真正值得记住的进展、本月新大事、降温项和下月观察清单。类似主流 GPT、Gemini、Claude、DeepSeek 或 Qwen 的重要版本发布，只要官方材料能证明能力、可用性或性价比发生明显变化，就会进入高优先级比较。
+
 ## 目录结构
 
 ```text
@@ -44,6 +48,8 @@ config/settings.json          兴趣、来源、阈值、配额和数量配置
 data/state.json               去重状态及未完成投递进度
 digests/YYYY/MM/              已发送简报永久归档
 reports/YYYY/MM/              来源健康、评分和 Token 用量报告
+digests/monthly/YYYY/         已发送月度复盘归档
+reports/monthly/YYYY/         月度复评明细和新闻对照报告
 output/                       当前运行预览和诊断，仅作为 Artifact
 src/collectors.py             RSS、Sitemap、正文及资源链接提取
 src/ai.py                     初筛、终审、去重、总结和用量统计
@@ -90,10 +96,12 @@ Secrets 只注入需要它们的步骤：采集和测试阶段无法读取业务
 进入 `Actions → AI Insights Update → Run workflow`，每次选择一个模式：
 
 1. `collect-only`：只检查信息源，不读取 Secrets。
-2. `dry-run`：调用 DeepSeek 生成预览，不推送、不修改状态。
-3. `send`：真实推送，并持久化状态、简报和报告。
+2. `dry-run`：生成本周简报预览，不推送、不修改状态。
+3. `send`：真实发送本周简报，并持久化状态、简报和报告。
+4. `monthly-dry-run`：用“本月至今”的历史推送和新闻生成月报预览，不推送。
+5. `monthly-send`：真实发送“上个自然月”的复盘；一般只让每月1日的定时任务使用。
 
-预览与诊断可在运行详情底部的 Artifacts 中下载，保留30天。已成功发送的正式简报会永久保存在 `digests/`，对应报告保存在 `reports/`。
+查看内容效果不需要再次 `send`。运行 `dry-run` 或 `monthly-dry-run` 后，在运行详情底部下载 `latest-digest-*` Artifact，打开其中的 `latest_digest.md` 即可；只有要检查飞书群里的实际卡片排版时才需要真实发送。预览 Artifact 保留30天，正式简报永久保存在 `digests/`，对应报告保存在 `reports/`。
 
 ## 四、本地 Conda Py312
 
@@ -122,6 +130,8 @@ conda env create -f environment.yml
 ```powershell
 python -m src.main --dry-run
 python -m src.main
+python -m src.main --monthly --dry-run --current-month
+python -m src.main --monthly
 ```
 
 ## 五、筛选和成本配置
@@ -137,12 +147,13 @@ python -m src.main
 - `category_minimums`：在达到最低分时优先保留的类别数量。
 - `overlap_hours`：采集重叠窗口，默认48小时；依靠状态去重，不会重复消耗已处理文章。
 - `full_text_max_characters`：单篇送入总结模型的最大正文字符数。
+- `monthly_review`：月报历史条数、新闻扫描数量、新闻质量阈值和正文长度。
 
 运行报告中的 `ai_usage` 会记录每个模型的请求数、输入 Token、输出 Token和总 Token，便于观察额度消耗。
 
 ## 六、状态恢复机制
 
-发送前，程序会在 `data/state.json` 创建 `pending_delivery`，其中包含简报 ID、分片和已成功分片编号。每张飞书卡片收到成功响应后立即更新本地进度；无论主任务最终成功还是失败，独立 `persist` Job 都会尝试把状态提交回 `main`。
+发送前，程序会在 `data/state.json` 创建 `pending_delivery`，其中包含简报类型、简报 ID、分片和已成功分片编号。周报与月报使用独立成功时间：月报不会推进周报的采集窗口。每张飞书卡片收到成功响应后立即更新本地进度；无论主任务最终成功还是失败，独立 `persist` Job 都会尝试把状态提交回 `main`。
 
 下一次真实运行若发现未完成投递，会跳过采集和 DeepSeek，直接续发剩余分片。
 

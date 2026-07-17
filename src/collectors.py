@@ -158,6 +158,7 @@ def _collect_one_source(
     max_entries: int,
 ) -> tuple[list[Article], int]:
     started = time.perf_counter()
+    max_entries = min(max_entries, int(source.get("max_entries", max_entries)))
     kind = str(source.get("kind", "rss")).lower()
     if kind == "rss":
         items = _collect_rss(source, cutoff, timeout_seconds, max_entries)
@@ -225,15 +226,26 @@ def _collect_sitemap(
             dated_urls.append((published_at, url))
 
     dated_urls.sort(reverse=True)
-    items: list[Article] = []
-    for published_at, url in dated_urls[:max_entries]:
+    def fetch_page(published_at: datetime, url: str) -> Article | None:
         try:
             page = _get(url, timeout_seconds)
             title, summary = _page_metadata(page.text, url)
             if title:
-                items.append(_article_from_source(source, title, url, published_at, summary))
+                return _article_from_source(source, title, url, published_at, summary)
         except Exception as exc:
             LOG.info("站点地图页面提取失败 [%s]：%s", url, exc)
+        return None
+
+    targets = dated_urls[:max_entries]
+    items: list[Article] = []
+    workers = max(1, min(6, len(targets)))
+    with ThreadPoolExecutor(max_workers=workers, thread_name_prefix="sitemap") as executor:
+        futures = [executor.submit(fetch_page, published_at, url) for published_at, url in targets]
+        for future in as_completed(futures):
+            item = future.result()
+            if item:
+                items.append(item)
+    items.sort(key=lambda item: item.published_at, reverse=True)
     return items
 
 
@@ -264,6 +276,36 @@ def enrich_full_text(article: Article, client: httpx.Client, max_characters: int
 
     article.content = best_text[:max_characters]
     article.resource_urls = list(dict.fromkeys(resources))[:5]
+
+
+def enrich_articles(
+    articles: list[Article],
+    timeout_seconds: int,
+    max_characters: int,
+    max_workers: int = 6,
+) -> None:
+    """Enrich independent articles concurrently while keeping failures isolated."""
+
+    headers = {"User-Agent": USER_AGENT, "Accept-Encoding": "gzip, deflate"}
+
+    def enrich_one(article: Article) -> None:
+        with httpx.Client(
+            timeout=timeout_seconds,
+            follow_redirects=True,
+            headers=headers,
+        ) as client:
+            enrich_full_text(article, client, max_characters)
+
+    workers = max(1, min(max_workers, len(articles)))
+    if not articles:
+        return
+    with ThreadPoolExecutor(max_workers=workers, thread_name_prefix="fulltext") as executor:
+        futures = [executor.submit(enrich_one, article) for article in articles]
+        for future in as_completed(futures):
+            try:
+                future.result()
+            except Exception as exc:
+                LOG.info("正文并发提取失败：%s", exc)
 
 
 def _extract_article_text(page_html: str, original_url: str) -> tuple[str, list[str]]:

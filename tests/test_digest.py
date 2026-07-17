@@ -1,8 +1,8 @@
 import unittest
 from datetime import datetime, timezone
 
-from src.digest import render_markdown, split_for_feishu
-from src.models import Article, ArticleSummary
+from src.digest import render_markdown, render_monthly_markdown, split_for_feishu
+from src.models import Article, ArticleSummary, MonthlyReviewDigest, MonthlyReviewItem
 
 
 class DigestTests(unittest.TestCase):
@@ -49,6 +49,40 @@ class DigestTests(unittest.TestCase):
         self.assertIn("https://example.com/article", rendered)
         self.assertIn("digest123", rendered)
         self.assertIn("https://github.com/example/project", rendered)
+
+    def test_render_monthly_review_contains_reassessment_sections(self):
+        now = datetime(2026, 7, 17, tzinfo=timezone.utc)
+        article = Article(
+            id="a",
+            title="Major Model Release",
+            url="https://example.com/model",
+            source="Official",
+            source_category="官方动态",
+            published_at=now,
+            summary="summary",
+        )
+        item = MonthlyReviewItem(
+            article=article,
+            was_previously_sent=True,
+            importance_score=9.2,
+            verdict="仍属前沿",
+            reassessment="重新阅读后依然重要",
+            latest_context="后续新闻确认其影响",
+            recommendation="继续跟踪",
+        )
+        digest = MonthlyReviewDigest(
+            period_label="2026年07月",
+            executive_summary="模型能力显著前进",
+            themes=["推理能力"],
+            reviews=[item],
+            top_ids=["a"],
+            major_news_ids=[],
+            watchlist=["观察实际采用"],
+        )
+        rendered = render_monthly_markdown(digest, 12, "Asia/Shanghai", now, "month1")
+        self.assertIn("AI 前沿月度复盘", rendered)
+        self.assertIn("此前推送内容复核清单", rendered)
+        self.assertIn("重新阅读后依然重要", rendered)
 
 
 if __name__ == "__main__":

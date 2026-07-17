@@ -83,6 +83,37 @@ class StateTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, "缺少字段"):
                 StateStore(path)
 
+    def test_monthly_delivery_does_not_advance_weekly_cutoff(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "state.json"
+            weekly_at = datetime(2026, 7, 6, tzinfo=timezone.utc)
+            monthly_at = datetime(2026, 8, 1, tzinfo=timezone.utc)
+            weekly = self._article("https://example.com/weekly", "Weekly", weekly_at)
+            monthly = self._article("https://example.com/monthly", "Monthly", monthly_at)
+            store = StateStore(path)
+            store.mark_success([weekly], {weekly.id}, weekly_at)
+            store.start_delivery(
+                "monthly1",
+                "monthly",
+                "markdown",
+                ["part"],
+                [monthly],
+                {monthly.id},
+                monthly_at,
+                "2026-08-01",
+                delivery_kind="monthly",
+                updates_last_success=False,
+            )
+            store.mark_delivery_chunk_sent(0)
+            store.complete_delivery(monthly_at)
+            self.assertEqual(store.data["last_success_at"], weekly_at.isoformat())
+            self.assertEqual(store.data["last_monthly_success_at"], monthly_at.isoformat())
+            selected = store.selected_items_between(
+                weekly_at - timedelta(days=1),
+                weekly_at + timedelta(days=1),
+            )
+            self.assertEqual([item["id"] for item in selected], [weekly.id])
+
     @staticmethod
     def _article(url: str, title: str, now: datetime) -> Article:
         return Article(

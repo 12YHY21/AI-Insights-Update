@@ -53,13 +53,15 @@ class StateStore:
                 raise RuntimeError(f"状态文件损坏：{path}: {exc}") from exc
         else:
             self.data = {
-                "version": 2,
+                "version": 3,
                 "last_success_at": None,
+                "last_monthly_success_at": None,
                 "pending_delivery": None,
                 "items": {},
             }
-        self.data["version"] = 2
+        self.data["version"] = 3
         self.data.setdefault("last_success_at", None)
+        self.data.setdefault("last_monthly_success_at", None)
         self.data.setdefault("pending_delivery", None)
         self.data.setdefault("items", {})
         if not isinstance(self.data["items"], dict):
@@ -81,6 +83,29 @@ class StateStore:
     def has_seen(self, item_id: str) -> bool:
         return item_id in self.data.get("items", {})
 
+    def selected_items_between(self, start: datetime, end: datetime) -> list[dict[str, Any]]:
+        """Return all content actually selected for a push within [start, end)."""
+
+        return [value for value in self.processed_items_between(start, end) if value.get("selected")]
+
+    def processed_items_between(self, start: datetime, end: datetime) -> list[dict[str, Any]]:
+        """Return all evaluated content processed within [start, end)."""
+
+        processed: list[dict[str, Any]] = []
+        for item_id, value in self.data.get("items", {}).items():
+            if not isinstance(value, dict):
+                continue
+            try:
+                processed_at = datetime.fromisoformat(
+                    str(value["processed_at"]).replace("Z", "+00:00")
+                ).astimezone(timezone.utc)
+            except (KeyError, TypeError, ValueError):
+                continue
+            if start.astimezone(timezone.utc) <= processed_at < end.astimezone(timezone.utc):
+                processed.append({"id": item_id, **copy.deepcopy(value)})
+        processed.sort(key=lambda value: str(value.get("processed_at", "")), reverse=True)
+        return processed
+
     def start_delivery(
         self,
         delivery_id: str,
@@ -92,6 +117,8 @@ class StateStore:
         success_at: datetime,
         edition_date: str,
         archive: bool = True,
+        delivery_kind: str = "weekly",
+        updates_last_success: bool = True,
     ) -> None:
         existing = self.pending_delivery
         if existing:
@@ -112,6 +139,8 @@ class StateStore:
             "created_at": datetime.now(timezone.utc).isoformat(),
             "edition_date": edition_date,
             "archive": archive,
+            "delivery_kind": delivery_kind,
+            "updates_last_success": updates_last_success,
         }
 
     def mark_delivery_chunk_sent(self, index: int) -> None:
@@ -135,6 +164,7 @@ class StateStore:
 
         items = self.data.setdefault("items", {})
         selected_ids = set(pending.get("selected_ids", []))
+        delivery_kind = str(pending.get("delivery_kind", "weekly"))
         processed_at = completed_at.astimezone(timezone.utc).isoformat()
         for item in pending.get("processed_items", []):
             item_id = str(item.get("id", ""))
@@ -144,10 +174,17 @@ class StateStore:
                 "title": item.get("title", ""),
                 "url": item.get("url", ""),
                 "source": item.get("source", ""),
+                "source_category": item.get("source_category", ""),
+                "published_at": item.get("published_at", ""),
+                "summary": item.get("summary", ""),
                 "selected": item_id in selected_ids,
                 "processed_at": processed_at,
+                "digest_kind": delivery_kind,
             }
-        self.data["last_success_at"] = pending.get("success_at", processed_at)
+        if pending.get("updates_last_success", delivery_kind == "weekly"):
+            self.data["last_success_at"] = pending.get("success_at", processed_at)
+        if delivery_kind == "monthly":
+            self.data["last_monthly_success_at"] = pending.get("success_at", processed_at)
         snapshot = copy.deepcopy(pending)
         self.data["pending_delivery"] = None
         self._prune(completed_at)
@@ -166,10 +203,18 @@ class StateStore:
                 "title": article.title,
                 "url": article.url,
                 "source": article.source,
+                "source_category": article.source_category,
+                "published_at": article.published_at.astimezone(timezone.utc).isoformat(),
+                "summary": article.summary[:2000],
                 "selected": article.id in selected_ids,
                 "processed_at": processed_at,
+                "digest_kind": "weekly",
             }
         self.data["last_success_at"] = processed_at
+        self._prune(now)
+
+    def mark_monthly_success(self, now: datetime) -> None:
+        self.data["last_monthly_success_at"] = now.astimezone(timezone.utc).isoformat()
         self._prune(now)
 
     def _prune(self, now: datetime, keep_days: int = 180) -> None:
@@ -222,4 +267,7 @@ class StateStore:
             "title": article.title,
             "url": article.url,
             "source": article.source,
+            "source_category": article.source_category,
+            "published_at": article.published_at.astimezone(timezone.utc).isoformat(),
+            "summary": article.summary[:2000],
         }

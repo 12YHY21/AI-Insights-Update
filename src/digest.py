@@ -3,7 +3,7 @@ from __future__ import annotations
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from .models import ArticleSummary
+from .models import ArticleSummary, MonthlyReviewDigest, MonthlyReviewItem
 
 
 SEPARATOR = "\n\n---\n\n"
@@ -84,6 +84,99 @@ def render_empty_markdown(
     )
 
 
+def render_monthly_markdown(
+    digest: MonthlyReviewDigest,
+    scanned_news_count: int,
+    timezone_name: str,
+    generated_at: datetime | None = None,
+    digest_identifier: str = "",
+) -> str:
+    local_now = generated_at or datetime.now(ZoneInfo(timezone_name))
+    if local_now.tzinfo is None:
+        local_now = local_now.replace(tzinfo=ZoneInfo(timezone_name))
+    else:
+        local_now = local_now.astimezone(ZoneInfo(timezone_name))
+
+    by_id = {item.article.id: item for item in digest.reviews}
+    prior_reviews = [item for item in digest.reviews if item.was_previously_sent]
+    sections = [
+        "\n".join(
+            [
+                f"**{local_now:%Y-%m-%d} · AI 前沿月度复盘**",
+                f"复盘区间：**{digest.period_label}**",
+                f"重新审视 **{len(prior_reviews)}** 条历史推送，并对照 **{scanned_news_count}** 条本月新闻候选。",
+                f"简报 ID：`{digest_identifier}`" if digest_identifier else "",
+                "本报告只依据已采集原文判断；待验证信息不会当作确定事实。",
+            ]
+        ).replace("\n\n本报告", "\n本报告")
+    ]
+    sections.append(f"**本月总判断**\n\n{digest.executive_summary}")
+    sections.append("**本月主线**\n\n" + "\n".join(f"- {value}" for value in digest.themes))
+
+    top_reviews = [by_id[item_id] for item_id in digest.top_ids if item_id in by_id]
+    if top_reviews:
+        sections.append(
+            "**真正值得记住的进展**\n\n"
+            + "\n\n".join(_monthly_review_block(item, index) for index, item in enumerate(top_reviews, 1))
+        )
+
+    if prior_reviews:
+        sections.append(
+            "**此前推送内容复核清单**\n\n"
+            + "\n".join(
+                f"- [{item.article.title}]({item.article.url}) — **{item.verdict}** "
+                f"{item.importance_score:.1f}/10：{item.reassessment}"
+                for item in prior_reviews
+            )
+        )
+
+    major_news = [by_id[item_id] for item_id in digest.major_news_ids if item_id in by_id]
+    if major_news:
+        sections.append(
+            "**本月不可忽略的新动态**\n\n"
+            + "\n".join(
+                f"- [{item.article.title}]({item.article.url}) — **{item.verdict}** "
+                f"{item.importance_score:.1f}/10：{item.reassessment}"
+                for item in major_news
+            )
+        )
+
+    caution = [
+        item
+        for item in digest.reviews
+        if item.verdict in {"影响有限", "待验证"}
+    ]
+    if caution:
+        sections.append(
+            "**降温与待验证**\n\n"
+            + "\n".join(
+                f"- [{item.article.title}]({item.article.url}) — {item.verdict}：{item.latest_context}"
+                for item in caution
+            )
+        )
+
+    sections.append("**下月观察清单**\n\n" + "\n".join(f"- {value}" for value in digest.watchlist))
+    return SEPARATOR.join(section for section in sections if section.strip()).strip() + "\n"
+
+
+def render_empty_monthly_markdown(
+    period_label: str,
+    timezone_name: str,
+    generated_at: datetime | None = None,
+    digest_identifier: str = "",
+) -> str:
+    local_now = generated_at or datetime.now(ZoneInfo(timezone_name))
+    if local_now.tzinfo is None:
+        local_now = local_now.replace(tzinfo=ZoneInfo(timezone_name))
+    local_now = local_now.astimezone(ZoneInfo(timezone_name))
+    identifier = f"\n\n简报 ID：`{digest_identifier}`" if digest_identifier else ""
+    return (
+        f"**{local_now:%Y-%m-%d} · AI 前沿月度复盘**\n\n"
+        f"复盘区间：**{period_label}**{identifier}\n\n"
+        "本期没有历史推送或新新闻候选可供复核。任务运行正常，下个月继续观察。\n"
+    )
+
+
 def split_for_feishu(markdown: str, max_chars: int = 6000) -> list[str]:
     """Split on article boundaries, then paragraphs, while enforcing the hard limit."""
 
@@ -151,3 +244,17 @@ def _edition_name(local_now: datetime) -> str:
     if local_now.weekday() == 4:
         return "周五技术精选"
     return "AI 前沿精选"
+
+
+def _monthly_review_block(item: MonthlyReviewItem, index: int) -> str:
+    origin = "历史推送复核" if item.was_previously_sent else "本月新动态"
+    return "\n".join(
+        [
+            f"**{index}. {item.article.title}**",
+            f"性质：{origin}　结论：**{item.verdict}**（{item.importance_score:.1f}/10）",
+            f"重新判断：{item.reassessment}",
+            f"本月对照：{item.latest_context}",
+            f"建议：{item.recommendation}",
+            f"来源：{item.article.source}　[查看原文]({item.article.url})",
+        ]
+    )

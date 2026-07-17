@@ -1,5 +1,6 @@
 {
   "title": "AI 前沿技术简报",
+  "monthly_title": "AI 前沿月度复盘",
   "timezone": "Asia/Shanghai",
   "lookback_days_on_first_run": 7,
   "overlap_hours": 48,
@@ -27,8 +28,23 @@
   "full_text_max_characters": 18000,
   "request_timeout_seconds": 25,
   "send_empty_digest": true,
+  "monthly_review": {
+    "max_history_items": 32,
+    "max_news_candidates": 48,
+    "max_news_items": 10,
+    "minimum_news_score": 7.0,
+    "max_candidates": 140,
+    "max_entries_per_feed": 50,
+    "full_text_max_characters": 7000,
+    "scan_categories": [
+      "官方动态",
+      "开源与工程",
+      "工程与部署"
+    ]
+  },
   "interests": [
-    "大语言模型与推理模型",
+    "主流基础模型的重要版本发布与能力变化（GPT、Gemini、Claude、DeepSeek、Qwen 等）",
+    "大语言模型与推理模型的新训练、推理和评测方法",
     "Agent 与工具调用",
     "RAG、检索与知识库",
     "多模态模型",
@@ -95,6 +111,7 @@
         "/news/",
         "/research/"
       ],
+      "max_entries": 20,
       "category": "官方动态"
     },
     {
@@ -104,7 +121,28 @@
       "include_url_patterns": [
         "/news/"
       ],
+      "max_entries": 20,
       "date_from_url_regex": "news(\\d{6,8})",
+      "category": "官方动态"
+    },
+    {
+      "name": "Google AI",
+      "url": "https://blog.google/technology/ai/rss/",
+      "category": "官方动态"
+    },
+    {
+      "name": "GitHub AI & ML",
+      "url": "https://github.blog/ai-and-ml/feed/",
+      "category": "开源与工程"
+    },
+    {
+      "name": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/feed/",
+      "category": "工程与部署"
+    },
+    {
+      "name": "Qwen",
+      "url": "https://qwenlm.github.io/blog/index.xml",
       "category": "官方动态"
     }
   ]

@@ -75,7 +75,44 @@ def _validate_settings(settings: dict[str, Any]) -> None:
         raise RuntimeError(f"配置缺少字段：{', '.join(missing)}")
     if not isinstance(settings["feeds"], list) or not settings["feeds"]:
         raise RuntimeError("配置中的 feeds 必须是非空列表")
+    names: set[str] = set()
     for index, feed in enumerate(settings["feeds"], 1):
         if not isinstance(feed, dict) or not feed.get("name") or not feed.get("url"):
             raise RuntimeError(f"第 {index} 个 feed 缺少 name 或 url")
+        name = str(feed["name"])
+        if name in names:
+            raise RuntimeError(f"信息源名称重复：{name}")
+        names.add(name)
+        if not str(feed["url"]).startswith("https://"):
+            raise RuntimeError(f"信息源必须使用 HTTPS：{name}")
+        if str(feed.get("kind", "rss")).lower() not in {"rss", "sitemap"}:
+            raise RuntimeError(f"信息源类型无效：{name}")
 
+    monthly = settings.get("monthly_review", {})
+    if not isinstance(monthly, dict):
+        raise RuntimeError("monthly_review 必须是对象")
+    positive_fields = {
+        "max_history_items",
+        "max_news_candidates",
+        "max_news_items",
+        "max_candidates",
+        "max_entries_per_feed",
+        "full_text_max_characters",
+    }
+    for field in positive_fields:
+        if field in monthly and (
+            not isinstance(monthly[field], int)
+            or isinstance(monthly[field], bool)
+            or monthly[field] <= 0
+        ):
+            raise RuntimeError(f"monthly_review.{field} 必须是正整数")
+    minimum_score = monthly.get("minimum_news_score", 7.0)
+    if not isinstance(minimum_score, (int, float)) or not 0 <= minimum_score <= 10:
+        raise RuntimeError("monthly_review.minimum_news_score 必须在 0 到 10 之间")
+    scan_categories = monthly.get("scan_categories", [])
+    if not isinstance(scan_categories, list) or not all(
+        isinstance(value, str) and value.strip() for value in scan_categories
+    ):
+        raise RuntimeError("monthly_review.scan_categories 必须是字符串列表")
+    if monthly.get("max_news_items", 10) > monthly.get("max_news_candidates", 48):
+        raise RuntimeError("monthly_review.max_news_items 不能大于 max_news_candidates")

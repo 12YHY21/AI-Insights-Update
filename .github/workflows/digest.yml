@@ -2,7 +2,9 @@ name: AI Insights Update
 
 on:
   schedule:
-    - cron: "17 8 * * 1,5"
+    - cron: "17 8 * * 1"
+      timezone: "Asia/Shanghai"
+    - cron: "17 9 1 * *"
       timezone: "Asia/Shanghai"
   workflow_dispatch:
     inputs:
@@ -14,6 +16,8 @@ on:
           - dry-run
           - collect-only
           - send
+          - monthly-dry-run
+          - monthly-send
         default: dry-run
 
 concurrency:
@@ -40,12 +44,18 @@ jobs:
         shell: bash
         run: |
           if [ "${{ github.event_name }}" = "schedule" ]; then
-            mode="send"
+            if [ "${{ github.event.schedule }}" = "17 9 1 * *" ]; then
+              mode="monthly-send"
+            elif [ "$(TZ=Asia/Shanghai date +%d)" = "01" ]; then
+              mode="skip"
+            else
+              mode="send"
+            fi
           else
             mode="${{ inputs.mode }}"
           fi
           echo "mode=$mode" >> "$GITHUB_OUTPUT"
-          if [ "$mode" = "send" ]; then
+          if [ "$mode" = "send" ] || [ "$mode" = "monthly-send" ]; then
             echo "persist_state=true" >> "$GITHUB_OUTPUT"
           else
             echo "persist_state=false" >> "$GITHUB_OUTPUT"
@@ -86,8 +96,26 @@ jobs:
           DEEPSEEK_SUMMARY_MODEL: ${{ vars.DEEPSEEK_SUMMARY_MODEL || 'deepseek-v4-pro' }}
         run: python -m src.main
 
+      - name: Generate monthly review preview
+        if: steps.mode.outputs.mode == 'monthly-dry-run'
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_RANK_MODEL: ${{ vars.DEEPSEEK_RANK_MODEL || 'deepseek-v4-flash' }}
+          DEEPSEEK_SUMMARY_MODEL: ${{ vars.DEEPSEEK_SUMMARY_MODEL || 'deepseek-v4-pro' }}
+        run: python -m src.main --monthly --dry-run --current-month
+
+      - name: Generate and send monthly review
+        if: steps.mode.outputs.mode == 'monthly-send'
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          FEISHU_WEBHOOK_SECRET: ${{ secrets.FEISHU_WEBHOOK_SECRET }}
+          DEEPSEEK_RANK_MODEL: ${{ vars.DEEPSEEK_RANK_MODEL || 'deepseek-v4-flash' }}
+          DEEPSEEK_SUMMARY_MODEL: ${{ vars.DEEPSEEK_SUMMARY_MODEL || 'deepseek-v4-pro' }}
+        run: python -m src.main --monthly
+
       - name: Upload resumable state and archives
-        if: always() && steps.mode.outputs.mode == 'send'
+        if: always() && (steps.mode.outputs.mode == 'send' || steps.mode.outputs.mode == 'monthly-send')
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: persistence-${{ github.run_id }}
