@@ -42,12 +42,14 @@ class DigestTests(unittest.TestCase):
             limitations=["局限"],
             audience="工程师",
         )
-        rendered = render_markdown([summary], 8, "Asia/Shanghai", now)
+        article.resource_urls = ["https://github.com/example/project"]
+        rendered = render_markdown([summary], 8, "Asia/Shanghai", now, "digest123")
         self.assertIn("中文标题", rendered)
         self.assertIn("Original title", rendered)
         self.assertIn("https://example.com/article", rendered)
+        self.assertIn("digest123", rendered)
+        self.assertIn("https://github.com/example/project", rendered)
 
 
 if __name__ == "__main__":
     unittest.main()
-

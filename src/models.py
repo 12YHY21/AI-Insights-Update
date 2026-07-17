@@ -17,6 +17,8 @@ class Article:
     score: float = 0.0
     ai_category: str = "其他"
     ranking_reason: str = ""
+    duplicate_of: str = ""
+    resource_urls: list[str] = field(default_factory=list)
 
 
 @dataclass(slots=True)
@@ -29,4 +31,3 @@ class ArticleSummary:
     findings: list[str] = field(default_factory=list)
     limitations: list[str] = field(default_factory=list)
     audience: str = ""
-

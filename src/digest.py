@@ -14,6 +14,7 @@ def render_markdown(
     candidate_count: int,
     timezone_name: str,
     generated_at: datetime | None = None,
+    digest_identifier: str = "",
 ) -> str:
     local_now = generated_at or datetime.now(ZoneInfo(timezone_name))
     if local_now.tzinfo is None:
@@ -21,13 +22,16 @@ def render_markdown(
     else:
         local_now = local_now.astimezone(ZoneInfo(timezone_name))
 
+    edition = _edition_name(local_now)
+    identifier_line = f"简报 ID：`{digest_identifier}`" if digest_identifier else ""
     sections = [
         "\n".join(
-            [
-                f"**{local_now:%Y-%m-%d} · AI 前沿精选**",
+            [line for line in [
+                f"**{local_now:%Y-%m-%d} · {edition}**",
                 f"本期共评估 **{candidate_count}** 条更新，精选 **{len(summaries)}** 条。",
+                identifier_line,
                 "所有结论均基于原文或摘要生成，请点击原文核验关键数据。",
-            ]
+            ] if line]
         )
     ]
     for index, summary in enumerate(summaries, 1):
@@ -55,16 +59,27 @@ def render_markdown(
             f"**适合阅读**：{summary.audience}",
             f"[查看原文]({item.url})",
         ]
+        if item.resource_urls:
+            lines.extend(
+                ["", "**代码与资源**", *[f"- [资源 {number}]({url})" for number, url in enumerate(item.resource_urls, 1)]]
+            )
         sections.append("\n".join(lines))
     return SEPARATOR.join(sections).strip() + "\n"
 
 
-def render_empty_markdown(timezone_name: str, generated_at: datetime | None = None) -> str:
+def render_empty_markdown(
+    timezone_name: str,
+    generated_at: datetime | None = None,
+    digest_identifier: str = "",
+) -> str:
     local_now = generated_at or datetime.now(ZoneInfo(timezone_name))
     if local_now.tzinfo is None:
         local_now = local_now.replace(tzinfo=ZoneInfo(timezone_name))
+    local_now = local_now.astimezone(ZoneInfo(timezone_name))
+    identifier_line = f"\n\n简报 ID：`{digest_identifier}`" if digest_identifier else ""
     return (
-        f"**{local_now.astimezone(ZoneInfo(timezone_name)):%Y-%m-%d} · AI 前沿精选**\n\n"
+        f"**{local_now:%Y-%m-%d} · {_edition_name(local_now)}**"
+        f"{identifier_line}\n\n"
         "本次采集没有发现达到质量阈值且未推送的新内容。任务运行正常，下次继续更新。\n"
     )
 
@@ -114,5 +129,25 @@ def _split_oversized_section(section: str, max_chars: int) -> list[str]:
 
 
 def _hard_split(text: str, max_chars: int) -> list[str]:
-    return [text[index : index + max_chars] for index in range(0, len(text), max_chars)] or [""]
+    pieces: list[str] = []
+    remaining = text
+    while len(remaining) > max_chars:
+        window = remaining[:max_chars]
+        split_at = max(window.rfind("\n"), window.rfind("。"), window.rfind("；"))
+        if split_at < max_chars // 2:
+            split_at = max_chars
+        else:
+            split_at += 1
+        pieces.append(remaining[:split_at])
+        remaining = remaining[split_at:]
+    if remaining:
+        pieces.append(remaining)
+    return pieces or [""]
 
+
+def _edition_name(local_now: datetime) -> str:
+    if local_now.weekday() == 0:
+        return "周一前沿速递"
+    if local_now.weekday() == 4:
+        return "周五技术精选"
+    return "AI 前沿精选"

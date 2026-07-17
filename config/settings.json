@@ -2,12 +2,26 @@
   "title": "AI 前沿技术简报",
   "timezone": "Asia/Shanghai",
   "lookback_days_on_first_run": 7,
-  "overlap_hours": 12,
+  "overlap_hours": 48,
   "max_candidates": 80,
   "max_entries_per_feed": 30,
   "rank_chunk_size": 12,
+  "rerank_top_n": 20,
+  "rerank_per_category": 4,
+  "title_similarity_threshold": 0.94,
   "max_selected": 6,
   "max_selected_per_source": 2,
+  "category_maximums": {
+    "论文": 3,
+    "官方动态": 2,
+    "开源与工程": 2,
+    "工程与部署": 2
+  },
+  "category_minimums": {
+    "官方动态": 1,
+    "开源与工程": 1,
+    "工程与部署": 1
+  },
   "minimum_score": 6.8,
   "fetch_full_text": true,
   "full_text_max_characters": 18000,
@@ -59,7 +73,7 @@
       "category": "官方动态"
     },
     {
-      "name": "Hugging Face",
+      "name": "Hugging Face Community",
       "url": "https://huggingface.co/blog/feed.xml",
       "category": "开源与工程"
     },
@@ -67,7 +81,31 @@
       "name": "NVIDIA Technical Blog",
       "url": "https://developer.nvidia.com/blog/feed/",
       "category": "工程与部署"
+    },
+    {
+      "name": "Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/feed/",
+      "category": "官方动态"
+    },
+    {
+      "name": "Anthropic",
+      "kind": "sitemap",
+      "url": "https://www.anthropic.com/sitemap.xml",
+      "include_url_patterns": [
+        "/news/",
+        "/research/"
+      ],
+      "category": "官方动态"
+    },
+    {
+      "name": "DeepSeek",
+      "kind": "sitemap",
+      "url": "https://api-docs.deepseek.com/sitemap.xml",
+      "include_url_patterns": [
+        "/news/"
+      ],
+      "date_from_url_regex": "news(\\d{6,8})",
+      "category": "官方动态"
     }
   ]
 }
-

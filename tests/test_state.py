@@ -5,7 +5,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from src.models import Article
-from src.state import StateStore, article_id, canonical_url
+from src.state import StateStore, article_id, canonical_url, digest_id
 
 
 class StateTests(unittest.TestCase):
@@ -43,6 +43,46 @@ class StateTests(unittest.TestCase):
             store.mark_success([], set(), now)
             self.assertEqual(store.cutoff(7, 12, now), now - timedelta(hours=12))
 
+    def test_pending_delivery_can_resume_and_complete(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "state.json"
+            now = datetime(2026, 7, 17, tzinfo=timezone.utc)
+            article = self._article("https://example.com/a", "A", now)
+            store = StateStore(path)
+            store.start_delivery(
+                "digest1",
+                "title",
+                "markdown",
+                ["part1", "part2"],
+                [article],
+                {article.id},
+                now,
+                "2026-07-17",
+            )
+            store.mark_delivery_chunk_sent(0)
+            store.save()
+
+            resumed = StateStore(path)
+            self.assertEqual(resumed.pending_delivery["sent_chunk_indexes"], [0])
+            resumed.mark_delivery_chunk_sent(1)
+            snapshot = resumed.complete_delivery(now)
+            self.assertEqual(snapshot["id"], "digest1")
+            self.assertIsNone(resumed.pending_delivery)
+            self.assertTrue(resumed.has_seen(article.id))
+
+    def test_digest_id_is_order_independent(self):
+        self.assertEqual(digest_id(["b", "a"], "2026-07-17"), digest_id(["a", "b"], "2026-07-17"))
+
+    def test_invalid_pending_delivery_is_rejected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "state.json"
+            path.write_text(
+                json.dumps({"version": 2, "items": {}, "pending_delivery": {"id": "broken"}}),
+                encoding="utf-8",
+            )
+            with self.assertRaisesRegex(RuntimeError, "缺少字段"):
+                StateStore(path)
+
     @staticmethod
     def _article(url: str, title: str, now: datetime) -> Article:
         return Article(
@@ -58,4 +98,3 @@ class StateTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
