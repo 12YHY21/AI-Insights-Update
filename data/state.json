@@ -1,7 +1,7 @@
 {
   "version": 3,
   "last_success_at": "2026-07-27T04:04:05.477023+00:00",
-  "last_monthly_success_at": null,
+  "last_monthly_success_at": "2026-08-01T04:35:13.260299+00:00",
   "pending_delivery": null,
   "items": {
     "fe44f961306e2acba1b6": {
@@ -1935,9 +1935,9 @@
       "source_category": "工程与部署",
       "published_at": "2026-07-24T17:59:03+00:00",
       "summary": "This post covers Opus 5’s improvements and practical guidance for AI engineers integrating the model into agentic systems and production inference workloads on Amazon Bedrock. See the documentation for Claude Platform on AWS.",
-      "selected": false,
-      "processed_at": "2026-07-27T04:04:05.477023+00:00",
-      "digest_kind": "weekly"
+      "selected": true,
+      "processed_at": "2026-08-01T04:35:13.260299+00:00",
+      "digest_kind": "monthly"
     },
     "bf70d809f9542eeef4af": {
       "title": "Launching Health in ChatGPT",
@@ -2716,9 +2716,9 @@
       "source_category": "官方动态",
       "published_at": "2026-07-22T01:28:45+00:00",
       "summary": "Our latest model, Claude Opus 4.8, is an upgrade to our Opus class of models, with stronger performance across coding, agentic tasks, and professional work, and the consistency to handle long-running work.",
-      "selected": false,
-      "processed_at": "2026-07-27T04:04:05.477023+00:00",
-      "digest_kind": "weekly"
+      "selected": true,
+      "processed_at": "2026-08-01T04:35:13.260299+00:00",
+      "digest_kind": "monthly"
     },
     "b37da97f77c031ecdaeb": {
       "title": "NVIDIA Vera CPU: Olympus Cores Built for Maximum Single-Thread Performance in Agentic AI",
@@ -2741,6 +2741,94 @@
       "selected": false,
       "processed_at": "2026-07-27T04:04:05.477023+00:00",
       "digest_kind": "weekly"
+    },
+    "18816edf464a073a0120": {
+      "title": "Introducing Claude Sonnet 4.5",
+      "url": "https://www.anthropic.com/news/claude-sonnet-4-5",
+      "source": "Anthropic",
+      "source_category": "官方动态",
+      "published_at": "2026-07-22T01:13:43+00:00",
+      "summary": "Claude Sonnet 4.5 is the best coding model in the world, strongest model for building complex agents, and best model at using computers.",
+      "selected": true,
+      "processed_at": "2026-08-01T04:35:13.260299+00:00",
+      "digest_kind": "monthly"
+    },
+    "1f2d9040d07a35603fde": {
+      "title": "Echoverse: Deep, evolving environments for computer-use agents",
+      "url": "https://www.microsoft.com/en-us/research/blog/echoverse-deep-evolving-environments-for-computer-use-agents",
+      "source": "Microsoft Research",
+      "source_category": "官方动态",
+      "published_at": "2026-07-30T17:00:00+00:00",
+      "summary": "Computer-use AI agents struggle with multi-step workflows like email and customer support. Echoverse trains agents in realistic environments rather than simply providing more training tasks, helping them improve as the tasks, tests, and environments evolve. The post Echoverse: Deep, evolving environments for computer-use agents appeared first on Microsoft Research .",
+      "selected": true,
+      "processed_at": "2026-08-01T04:35:13.260299+00:00",
+      "digest_kind": "monthly"
+    },
+    "9b5ec3802a1442d249e9": {
+      "title": "Introducing explicit prompt caching for OpenAI GPT-5.6 models on Amazon Bedrock",
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-explicit-prompt-caching-for-openai-gpt-5-6-models-on-amazon-bedrock",
+      "source": "AWS Machine Learning",
+      "source_category": "工程与部署",
+      "published_at": "2026-07-30T16:02:32+00:00",
+      "summary": "OpenAI GPT-5.6 Sol, Terra, and Luna are now generally available on Amazon Bedrock, along with explicit prompt caching that gives you precise control over which parts of your prompt are cached and reused. Learn how to get started, set up explicit caching, and migrate existing GPT workloads to reduce inference cost.",
+      "selected": true,
+      "processed_at": "2026-08-01T04:35:13.260299+00:00",
+      "digest_kind": "monthly"
+    },
+    "8479edade87c05f7ad28": {
+      "title": "EvoLib: Turning experience into evolving knowledge",
+      "url": "https://www.microsoft.com/en-us/research/blog/evolib-turning-experience-into-evolving-knowledge",
+      "source": "Microsoft Research",
+      "source_category": "官方动态",
+      "published_at": "2026-07-30T16:00:00+00:00",
+      "summary": "LLMs do not get smarter just by remembering more. EvoLib turns experience into evolving knowledge, taking reusable skills and insights that help models learn and adapt across tasks long after deployment. The post EvoLib: Turning experience into evolving knowledge appeared first on Microsoft Research .",
+      "selected": true,
+      "processed_at": "2026-08-01T04:35:13.260299+00:00",
+      "digest_kind": "monthly"
+    },
+    "c8c2521853f8de9e5b68": {
+      "title": "Gemini Robotics ER 2: powering robotics with video understanding, task orchestration, and multi-robot collaboration",
+      "url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration",
+      "source": "Google DeepMind",
+      "source_category": "官方动态",
+      "published_at": "2026-07-30T15:00:59+00:00",
+      "summary": "Gemini Robotics ER 2 helps robots reason, collaborate, and solve real-world tasks. It represents a step change in video understanding, tool orchestration, and multi-robot collaboration for robotic applications.",
+      "selected": true,
+      "processed_at": "2026-08-01T04:35:13.260299+00:00",
+      "digest_kind": "monthly"
+    },
+    "265c6a0134aba9b6d5ff": {
+      "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
+      "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
+      "source": "OpenAI",
+      "source_category": "官方动态",
+      "published_at": "2026-07-29T15:00:00+00:00",
+      "summary": "How two API settings improved GPT-5.6 performance on ARC-AGI-3, boosting scores and efficiency by retaining reasoning and enabling compaction.",
+      "selected": true,
+      "processed_at": "2026-08-01T04:35:13.260299+00:00",
+      "digest_kind": "monthly"
+    },
+    "da425c76a8c018d071b2": {
+      "title": "How avatarin built a 24/7 retail agent with GPT-Realtime",
+      "url": "https://openai.com/index/avatarin",
+      "source": "OpenAI",
+      "source_category": "官方动态",
+      "published_at": "2026-07-30T00:00:00+00:00",
+      "summary": "avatarin uses OpenAI’s GPT-Realtime to give Yamada Denki shoppers 24/7 multilingual support. In two weeks, 30,000 people used the agent and 92% of survey responses were positive.",
+      "selected": true,
+      "processed_at": "2026-08-01T04:35:13.260299+00:00",
+      "digest_kind": "monthly"
+    },
+    "5e431bbf920c7ba36bf7": {
+      "title": "Introducing Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
+      "url": "https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber",
+      "source": "Google DeepMind",
+      "source_category": "官方动态",
+      "published_at": "2026-07-21T15:16:30+00:00",
+      "summary": "We’re introducing new Gemini models, including Gemini 3.6 Flash, 3.5 Flash-Lite and 3.5 Flash Cyber.",
+      "selected": false,
+      "processed_at": "2026-08-01T04:35:13.260299+00:00",
+      "digest_kind": "monthly"
     }
   }
 }
