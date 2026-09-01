@@ -1,7 +1,7 @@
 {
   "version": 3,
   "last_success_at": "2026-08-31T05:40:07.086844+00:00",
-  "last_monthly_success_at": "2026-08-01T04:35:13.260299+00:00",
+  "last_monthly_success_at": "2026-09-01T06:14:51.913336+00:00",
   "pending_delivery": null,
   "items": {
     "fe44f961306e2acba1b6": {
@@ -2904,8 +2904,8 @@
       "published_at": "2026-07-28T16:00:00+00:00",
       "summary": "Managed Agents Gemini 3.6 Flash, Hooks and Triggers",
       "selected": false,
-      "processed_at": "2026-08-03T03:56:35.299638+00:00",
-      "digest_kind": "weekly"
+      "processed_at": "2026-09-01T06:14:51.913336+00:00",
+      "digest_kind": "monthly"
     },
     "1ba6226dfe2efa991730": {
       "title": "Optimizing production agents with Amazon Bedrock AgentCore Observability",
@@ -2958,9 +2958,9 @@
       "source_category": "官方动态",
       "published_at": "2026-07-29T14:10:25+00:00",
       "summary": "Anthropic researchers find weaknesses in cryptographic algorithms with Claude Mythos Preview",
-      "selected": false,
-      "processed_at": "2026-08-03T03:56:35.299638+00:00",
-      "digest_kind": "weekly"
+      "selected": true,
+      "processed_at": "2026-09-01T06:14:51.913336+00:00",
+      "digest_kind": "monthly"
     },
     "9c980868c23ca002eb7f": {
       "title": "The OlmoEarth Platform: Geospatial inference at planetary scale",
@@ -3300,8 +3300,8 @@
       "published_at": "2026-07-29T00:00:00+00:00",
       "summary": "GPT-5.6 improves AI efficiency across models, inference, and agentic workflows, helping deliver more useful intelligence per dollar.",
       "selected": false,
-      "processed_at": "2026-08-03T03:56:35.299638+00:00",
-      "digest_kind": "weekly"
+      "processed_at": "2026-09-01T06:14:51.913336+00:00",
+      "digest_kind": "monthly"
     },
     "b734d716b0d66f968346": {
       "title": "How AgentCore Gateway supports the MCP 2026-07-28 spec",
@@ -3948,9 +3948,9 @@
       "source_category": "官方动态",
       "published_at": "2026-08-13T00:00:00+00:00",
       "summary": "We’re launching DeepSeek-V4-Pro today! 🚀",
-      "selected": false,
-      "processed_at": "2026-08-17T01:55:58.745993+00:00",
-      "digest_kind": "weekly"
+      "selected": true,
+      "processed_at": "2026-09-01T06:14:51.913336+00:00",
+      "digest_kind": "monthly"
     },
     "5042ddb06fd844309130": {
       "title": "Serve Qwen3.8-2.4T-A95B, a 2.4T-Parameter Model, with Configurable Reasoning on NVIDIA GB300 NVL72",
@@ -4014,9 +4014,9 @@
       "source_category": "官方动态",
       "published_at": "2026-08-13T10:00:00+00:00",
       "summary": "Preview Ultrafast, a new OpenAI API service tier that runs GPT-5.6 Sol up to 14× faster. Powered by Cerebras, it delivers up to 750 output tokens per second.",
-      "selected": false,
-      "processed_at": "2026-08-17T01:55:58.745993+00:00",
-      "digest_kind": "weekly"
+      "selected": true,
+      "processed_at": "2026-09-01T06:14:51.913336+00:00",
+      "digest_kind": "monthly"
     },
     "7e17b92474bcfd24464a": {
       "title": "Write your first prompt with the GitHub Copilot app",
@@ -4070,8 +4070,8 @@
       "published_at": "2026-08-11T16:00:00+00:00",
       "summary": "Radiology AI is evolving beyond report generation. CARE-X explores a unified approach that combines flexible reasoning, calibrated predictions, and measurement-based tools for chest X-ray interpretation. The post Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement appeared first on Microsoft Research .",
       "selected": false,
-      "processed_at": "2026-08-17T01:55:58.745993+00:00",
-      "digest_kind": "weekly"
+      "processed_at": "2026-09-01T06:14:51.913336+00:00",
+      "digest_kind": "monthly"
     },
     "f2323421e5e51bb84aa7": {
       "title": "How well do job retraining programs work?",
@@ -4520,9 +4520,9 @@
       "source_category": "工程与部署",
       "published_at": "2026-08-11T15:59:22+00:00",
       "summary": "Claude apps gateway is a self-hosted governance layer between Claude Code and Claude Desktop and Amazon Bedrock or Claude Platform on AWS. This post presents a production reference deployment covering end-to-end architecture, enterprise deployment patterns, cost, and implementation resources.",
-      "selected": false,
-      "processed_at": "2026-08-17T01:55:58.745993+00:00",
-      "digest_kind": "weekly"
+      "selected": true,
+      "processed_at": "2026-09-01T06:14:51.913336+00:00",
+      "digest_kind": "monthly"
     },
     "6476741ad7bd8e8e5ea0": {
       "title": "How Zapier transformed core marketing processes with ChatGPT Work",
@@ -5257,9 +5257,9 @@
       "source_category": "官方动态",
       "published_at": "2026-08-29T10:57:56+00:00",
       "summary": "Anthropic is opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.",
-      "selected": false,
-      "processed_at": "2026-08-31T05:40:07.086844+00:00",
-      "digest_kind": "weekly"
+      "selected": true,
+      "processed_at": "2026-09-01T06:14:51.913336+00:00",
+      "digest_kind": "monthly"
     },
     "9c179a0af67d39a7b30e": {
       "title": "Batch write and discover records in Amazon SageMaker Feature Store",
@@ -5653,9 +5653,9 @@
       "source_category": "工程与部署",
       "published_at": "2026-08-26T17:07:12+00:00",
       "summary": "Alibaba released the model weights for Qwen3.8-Flash-Next as a preview of the upcoming Qwen4 architecture for developers to experiment with and evaluate. It’s...",
-      "selected": false,
-      "processed_at": "2026-08-31T05:40:07.086844+00:00",
-      "digest_kind": "weekly"
+      "selected": true,
+      "processed_at": "2026-09-01T06:14:51.913336+00:00",
+      "digest_kind": "monthly"
     },
     "f1c76f23a788b6884a28": {
       "title": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
@@ -5719,9 +5719,9 @@
       "source_category": "工程与部署",
       "published_at": "2026-08-27T18:36:08+00:00",
       "summary": "Amazon Bedrock now supports the OpenAI GPT-5.6 models, Terra and Luna, in India with India geographic cross-Region inference. If you have local data processing requirements, you can now use these models at scale while Amazon Bedrock keeps inference requests and data within India.",
-      "selected": false,
-      "processed_at": "2026-08-31T05:40:07.086844+00:00",
-      "digest_kind": "weekly"
+      "selected": true,
+      "processed_at": "2026-09-01T06:14:51.913336+00:00",
+      "digest_kind": "monthly"
     },
     "832a12c8f33a104e2b49": {
       "title": "Learning never stops: How AI makes learning continuous",
