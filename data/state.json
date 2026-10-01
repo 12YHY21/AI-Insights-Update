@@ -1,7 +1,7 @@
 {
   "version": 3,
   "last_success_at": "2026-09-28T05:28:01.434000+00:00",
-  "last_monthly_success_at": "2026-09-01T06:14:51.913336+00:00",
+  "last_monthly_success_at": "2026-10-01T07:11:21.708735+00:00",
   "pending_delivery": null,
   "items": {
     "fe44f961306e2acba1b6": {
@@ -4070,7 +4070,7 @@
       "published_at": "2026-08-11T16:00:00+00:00",
       "summary": "Radiology AI is evolving beyond report generation. CARE-X explores a unified approach that combines flexible reasoning, calibrated predictions, and measurement-based tools for chest X-ray interpretation. The post Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement appeared first on Microsoft Research .",
       "selected": false,
-      "processed_at": "2026-09-01T06:14:51.913336+00:00",
+      "processed_at": "2026-10-01T07:11:21.708735+00:00",
       "digest_kind": "monthly"
     },
     "f2323421e5e51bb84aa7": {
@@ -4151,15 +4151,15 @@
       "digest_kind": "weekly"
     },
     "ad55208f067fb11b6a51": {
-      "title": "Learning more about Claude's mathematical capabilities",
+      "title": "Claude has improved on a longstanding lower bound for the fraction of zeros of the Riemann zeta function that satisfy the Riemann hypothesis",
       "url": "https://www.anthropic.com/research/riemann-zeta",
       "source": "Anthropic",
       "source_category": "官方动态",
-      "published_at": "2026-08-13T23:32:23+00:00",
-      "summary": "An unreleased version of Claude has made strides on a problem related to the Riemann hypothesis. It improved the lower bound for the fraction of zeros of the Riemann zeta function that satisfy the hypothesis, increasing it from 41.6% to 67.2%.",
+      "published_at": "2026-09-26T16:02:49+00:00",
+      "summary": "An unreleased Claude model improved the lower bound for the fraction of zeroes of the Riemann zeta function that satisfy the hypothesis, raising it from 41.6% to 67.2%.",
       "selected": true,
-      "processed_at": "2026-08-17T01:55:58.745993+00:00",
-      "digest_kind": "weekly"
+      "processed_at": "2026-10-01T07:11:21.708735+00:00",
+      "digest_kind": "monthly"
     },
     "0b3298a080c8194d1f16": {
       "title": "Automate legacy web applications with Amazon Bedrock AgentCore Browser Tool",
@@ -6996,8 +6996,8 @@
       "published_at": "2026-09-11T16:58:57+00:00",
       "summary": "We analyzed 300,000 real conversations to measure the values Claude expresses across models and languages, compressed into four interpretable axes.",
       "selected": false,
-      "processed_at": "2026-09-14T04:59:52.300823+00:00",
-      "digest_kind": "weekly"
+      "processed_at": "2026-10-01T07:11:21.708735+00:00",
+      "digest_kind": "monthly"
     },
     "c187f25455eed028f5d2": {
       "title": "How Full-Stack NIM Optimizations Deliver 2.5x More Users on Nemotron 3 Ultra",
@@ -7039,9 +7039,9 @@
       "source_category": "官方动态",
       "published_at": "2026-09-10T00:00:00+00:00",
       "summary": "🚀 Introducing DeepSeek-V4.1-Flash: smarter, faster, more efficient.",
-      "selected": false,
-      "processed_at": "2026-09-14T04:59:52.300823+00:00",
-      "digest_kind": "weekly"
+      "selected": true,
+      "processed_at": "2026-10-01T07:11:21.708735+00:00",
+      "digest_kind": "monthly"
     },
     "825546b9e9e150a70467": {
       "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
@@ -7699,9 +7699,9 @@
       "source_category": "官方动态",
       "published_at": "2026-09-10T00:00:00+00:00",
       "summary": "GPT‑Live‑1 brings natural, full-duplex voice conversations to the API, with stronger instruction following, custom voices, and telephony support.",
-      "selected": false,
-      "processed_at": "2026-09-14T04:59:52.300823+00:00",
-      "digest_kind": "weekly"
+      "selected": true,
+      "processed_at": "2026-10-01T07:11:21.708735+00:00",
+      "digest_kind": "monthly"
     },
     "6d3464a55ae4c8dcd13a": {
       "title": "QuPAINT: Physics-Aware Multimodal Reasoning for Quantum Material Characterization",
@@ -7919,9 +7919,9 @@
       "source_category": "官方动态",
       "published_at": "2026-09-15T17:05:57+00:00",
       "summary": "",
-      "selected": false,
-      "processed_at": "2026-09-21T04:59:32.186218+00:00",
-      "digest_kind": "weekly"
+      "selected": true,
+      "processed_at": "2026-10-01T07:11:21.708735+00:00",
+      "digest_kind": "monthly"
     },
     "a1d018f16fad79f97456": {
       "title": "Your Agent Aced the Task. Will It Do It Again?",
@@ -9119,8 +9119,8 @@
       "published_at": "2026-09-25T16:09:46+00:00",
       "summary": "Deploy the publicly available Qwen3-TTS-12Hz-1.7B-Base text-to-speech model from Amazon SageMaker JumpStart to a fully managed, real-time endpoint, and clone a voice from a short reference clip. Cross-lingual cloning preserves the speaker's identity across languages.",
       "selected": false,
-      "processed_at": "2026-09-28T05:28:01.434000+00:00",
-      "digest_kind": "weekly"
+      "processed_at": "2026-10-01T07:11:21.708735+00:00",
+      "digest_kind": "monthly"
     },
     "90912ec5cf462463f6ab": {
       "title": "Validate GPU Cluster Readiness Before AI Workloads Land",
@@ -9163,8 +9163,8 @@
       "published_at": "2026-09-22T00:00:00+00:00",
       "summary": "",
       "selected": false,
-      "processed_at": "2026-09-28T05:28:01.434000+00:00",
-      "digest_kind": "weekly"
+      "processed_at": "2026-10-01T07:11:21.708735+00:00",
+      "digest_kind": "monthly"
     },
     "1a61367dd50f4dde0f0f": {
       "title": "A Survey on Fake Review Detection: From Pre-trained Language Models to Large Language Models",
@@ -9528,6 +9528,17 @@
       "selected": false,
       "processed_at": "2026-09-28T05:28:01.434000+00:00",
       "digest_kind": "weekly"
+    },
+    "d6b9f5e651b1891e950e": {
+      "title": "Introducing GPT-6.1 Sol",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "source": "OpenAI",
+      "source_category": "官方动态",
+      "published_at": "2026-09-29T10:00:00+00:00",
+      "summary": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
+      "selected": true,
+      "processed_at": "2026-10-01T07:11:21.708735+00:00",
+      "digest_kind": "monthly"
     }
   }
 }
