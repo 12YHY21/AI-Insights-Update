@@ -1,0 +1,1024 @@
+{
+  "schema_version": 1,
+  "run_id": "41285144655",
+  "mode": "monthly-send",
+  "generated_at": "2026-11-01T07:31:59.691718+00:00",
+  "cutoff": "2026-09-30T16:00:00+00:00",
+  "collected_count": 140,
+  "candidate_count": 48,
+  "successful_sources": 16,
+  "failed_sources": 0,
+  "sources": [
+    {
+      "name": "Anthropic",
+      "status": "ok",
+      "item_count": 20,
+      "elapsed_ms": 1301,
+      "newest_at": "2026-10-31T02:38:41+00:00",
+      "error": ""
+    },
+    {
+      "name": "arXiv cs.AI",
+      "status": "empty",
+      "item_count": 0,
+      "elapsed_ms": 417,
+      "newest_at": "",
+      "error": ""
+    },
+    {
+      "name": "arXiv cs.CL",
+      "status": "empty",
+      "item_count": 0,
+      "elapsed_ms": 393,
+      "newest_at": "",
+      "error": ""
+    },
+    {
+      "name": "arXiv cs.CV",
+      "status": "empty",
+      "item_count": 0,
+      "elapsed_ms": 395,
+      "newest_at": "",
+      "error": ""
+    },
+    {
+      "name": "arXiv cs.LG",
+      "status": "empty",
+      "item_count": 0,
+      "elapsed_ms": 392,
+      "newest_at": "",
+      "error": ""
+    },
+    {
+      "name": "arXiv cs.RO",
+      "status": "empty",
+      "item_count": 0,
+      "elapsed_ms": 397,
+      "newest_at": "",
+      "error": ""
+    },
+    {
+      "name": "AWS Machine Learning",
+      "status": "ok",
+      "item_count": 20,
+      "elapsed_ms": 469,
+      "newest_at": "2026-10-30T22:42:24+00:00",
+      "error": ""
+    },
+    {
+      "name": "DeepSeek",
+      "status": "ok",
+      "item_count": 1,
+      "elapsed_ms": 3710,
+      "newest_at": "2026-10-17T00:00:00+00:00",
+      "error": ""
+    },
+    {
+      "name": "GitHub AI & ML",
+      "status": "ok",
+      "item_count": 7,
+      "elapsed_ms": 480,
+      "newest_at": "2026-10-20T16:05:03+00:00",
+      "error": ""
+    },
+    {
+      "name": "Google AI",
+      "status": "ok",
+      "item_count": 5,
+      "elapsed_ms": 271,
+      "newest_at": "2026-10-26T16:00:00+00:00",
+      "error": ""
+    },
+    {
+      "name": "Google DeepMind",
+      "status": "ok",
+      "item_count": 10,
+      "elapsed_ms": 368,
+      "newest_at": "2026-10-28T17:00:58+00:00",
+      "error": ""
+    },
+    {
+      "name": "Hugging Face Community",
+      "status": "ok",
+      "item_count": 25,
+      "elapsed_ms": 327,
+      "newest_at": "2026-10-30T17:57:24+00:00",
+      "error": ""
+    },
+    {
+      "name": "Microsoft Research",
+      "status": "ok",
+      "item_count": 10,
+      "elapsed_ms": 679,
+      "newest_at": "2026-10-30T13:05:28+00:00",
+      "error": ""
+    },
+    {
+      "name": "NVIDIA Technical Blog",
+      "status": "ok",
+      "item_count": 45,
+      "elapsed_ms": 476,
+      "newest_at": "2026-10-30T21:35:31+00:00",
+      "error": ""
+    },
+    {
+      "name": "OpenAI",
+      "status": "ok",
+      "item_count": 50,
+      "elapsed_ms": 390,
+      "newest_at": "2026-10-30T09:30:00+00:00",
+      "error": ""
+    },
+    {
+      "name": "Qwen",
+      "status": "empty",
+      "item_count": 0,
+      "elapsed_ms": 154,
+      "newest_at": "",
+      "error": ""
+    }
+  ],
+  "monthly_period": "2026年10月",
+  "period_end": "2026-10-31T16:00:00+00:00",
+  "history_revisited_count": 23,
+  "previously_evaluated_count": 223,
+  "monthly_news_scanned_count": 218,
+  "digest_id": "8a36ac96b6634836",
+  "selected_count": 6,
+  "monthly_news_candidate_count": 48,
+  "monthly_news_selected_count": 6,
+  "ai_usage": {
+    "models": {
+      "deepseek-v4-flash": {
+        "requests": 5,
+        "prompt_tokens": 11613,
+        "completion_tokens": 4511,
+        "total_tokens": 16124
+      },
+      "deepseek-v4-pro": {
+        "requests": 1,
+        "prompt_tokens": 16006,
+        "completion_tokens": 4113,
+        "total_tokens": 20119
+      }
+    },
+    "total_requests": 6,
+    "total_tokens": 36243
+  },
+  "monthly_local_duplicates": [
+    {
+      "id": "1456ee151a5392db8ad4",
+      "title": "Scaling NVIDIA TensorRT Performance Optimization Beyond a Single Build Route with the Global Performance Tuner, Part 2",
+      "url": "https://developer.nvidia.com/blog/scaling-nvidia-tensorrt-performance-optimization-beyond-a-single-build-route-with-the-global-performance-tuner-part-2",
+      "duplicate_of": "4dcd06f240ef44ca5e9c"
+    },
+    {
+      "id": "4e31b829ae6885914a65",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "url": "https://deepmind.google/blog/introducing-gemini-4-argon",
+      "duplicate_of": "ed1be8ea5f53c7373a9c"
+    }
+  ],
+  "monthly_reviews": [
+    {
+      "id": "3e26c8620dd7a58a8cff",
+      "title": "LLM-discovered 0 days",
+      "url": "https://www.anthropic.com/research/zero-days",
+      "source": "Anthropic",
+      "previously_sent": true,
+      "importance_score": 9.0,
+      "verdict": "仍属前沿",
+      "reassessment": "Anthropic发布Opus 4.6在漏洞发现上的能力大幅提升，并公开早期成果。本月随后发布了完整攻击链和漏洞利用详情，进一步证实了AI在网络安全领域的实质性能力跃升。",
+      "latest_context": "配合新发布的CVE-2026-2796利用分析和10月30日的关键漏洞利用文章，该领域的重要性持续上升。",
+      "recommendation": "继续跟踪，关注AI网络安全能力的发展与政策响应",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "2ef1fbc3458e029d755f",
+      "title": "Discovering and exploiting vulnerabilities in critical, real-world software with Claude",
+      "url": "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude",
+      "source": "Anthropic",
+      "previously_sent": false,
+      "importance_score": 9.0,
+      "verdict": "仍属前沿",
+      "reassessment": "Anthropic发布未公开内部研究模型在Chrome和OS等关键软件中发现并利用复杂漏洞链实现远程代码执行，这是AI网络安全能力的里程碑，属于重大前沿事件。",
+      "latest_context": "作为本月最新官方动态，与早期漏洞发现文章呼应并展示了更高能力。",
+      "recommendation": "继续高度关注，等待全面技术报告和防御措施",
+      "top_item": true,
+      "shown_in_digest": true
+    },
+    {
+      "id": "3e32bae570ff21ee59e5",
+      "title": "Gemini 4 Carbon: Our next frontier model",
+      "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model",
+      "source": "Google DeepMind",
+      "previously_sent": false,
+      "importance_score": 9.0,
+      "verdict": "仍属前沿",
+      "reassessment": "Gemini 4 Carbon发布，AAII得分59登顶，在网络安全和长程任务上领先。这是本月最重大的模型发布之一，属于真正前沿。",
+      "latest_context": "重新评估后仍保持前沿地位，官方数据明确且影响模型格局。",
+      "recommendation": "继续跟踪其可用性和后续能力更新",
+      "top_item": true,
+      "shown_in_digest": true
+    },
+    {
+      "id": "1361df9fbb7d0e3ae379",
+      "title": "One Model to Loop Them All: Elastic Latent Recurrence for Language Models",
+      "url": "https://arxiv.org/abs/2610.12582",
+      "source": "arXiv cs.CL",
+      "previously_sent": true,
+      "importance_score": 8.0,
+      "verdict": "仍属前沿",
+      "reassessment": "ELR实现了无单循环税的弹性潜在递归模型，使单一检查点能够灵活调整推理计算量，在4B和30B MoE上取得显著效果，对推理基础设施有重要影响。",
+      "latest_context": "此类模型压缩和弹性推理方法在业界关注度高，可能影响未来小型模型的设计。",
+      "recommendation": "继续跟踪，特别是Koi-4B的后续发布和社区采用",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "b49099cde7e97e60f531",
+      "title": "Gemini 4 Argon: our next era of frontier intelligence",
+      "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence",
+      "source": "Google DeepMind",
+      "previously_sent": true,
+      "importance_score": 8.0,
+      "verdict": "仍属前沿",
+      "reassessment": "Gemini 4 Argon发布，具备1M token长上下文和高级推理，针对专业工作流。虽然仅限信任用户，但作为Gemini 4系列的前沿模型具有重要影响。",
+      "latest_context": "本月Gemini 4 Carbon发布并以59分登顶AAII，Argon作为其前身仍值得关注。",
+      "recommendation": "继续跟踪Argon的广泛可用性和Carbon的后续发布",
+      "top_item": true,
+      "shown_in_digest": true
+    },
+    {
+      "id": "ca353886f18b23010ffc",
+      "title": "Reverse engineering Claude's CVE-2026-2796 exploit",
+      "url": "https://www.anthropic.com/research/exploit",
+      "source": "Anthropic",
+      "previously_sent": false,
+      "importance_score": 8.0,
+      "verdict": "仍属前沿",
+      "reassessment": "Anthropic详细展示Claude如何编写Firefox漏洞利用，虽仅限测试环境，但揭示了模型在漏洞利用上的快速进步。",
+      "latest_context": "与完整攻击链文章同步，构成AI网络安全能力的重要证据链。",
+      "recommendation": "继续跟踪，关注后续出版物和防御研究",
+      "top_item": true,
+      "shown_in_digest": true
+    },
+    {
+      "id": "bb157bb6b3d38a630d72",
+      "title": "Phronix: The Capability-Centric Learning Paradigm for Agents",
+      "url": "https://arxiv.org/abs/2610.31789",
+      "source": "arXiv cs.AI",
+      "previously_sent": true,
+      "importance_score": 7.0,
+      "verdict": "仍属前沿",
+      "reassessment": "Phronix提供了一种让Agent从自身执行中提炼持久能力的方法，解决了长期自主学习的重复性问题。本月多篇论文（Self-Direction、EvoSyn）都在探索类似路线，属于Agent持续学习的重要方向。",
+      "latest_context": "与Self-Direction和EvoSyn并列，本月的Agent学习研究强调从执行中沉淀知识并降低token消耗。",
+      "recommendation": "继续跟踪该领域在开源框架中的采纳",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "5cda8fddacd5c5caa58c",
+      "title": "Finding bugs with Claude and property-based testing",
+      "url": "https://www.anthropic.com/research/property-based-testing",
+      "source": "Anthropic",
+      "previously_sent": true,
+      "importance_score": 7.0,
+      "verdict": "仍属前沿",
+      "reassessment": "利用Claude与基于属性的测试在Python生态系统中发现真实bug，展示了AI辅助软件验证的规模化潜力，与Anthropic的其他安全研究形成协同。",
+      "latest_context": "本月连续发布漏洞发现与利用文章，此篇作为早期证据仍具价值。",
+      "recommendation": "继续跟踪，特别是已报告bug的修复进展",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "929adda0efb128e5cb01",
+      "title": "Don't Forget What You Just Learned: Self-Directed Repair Turns Agent Mistakes Into Lasting Lessons",
+      "url": "https://arxiv.org/abs/2610.31846",
+      "source": "arXiv cs.AI",
+      "previously_sent": true,
+      "importance_score": 7.0,
+      "verdict": "仍属前沿",
+      "reassessment": "Self-Direction通过从错误中提炼LoRA适配器实现Agent的持续学习，在多个基准上显著提升成功率。该方向与Phronix、EvoSyn一致，是Agent学习的重要前沿。",
+      "latest_context": "本月Agent学习主题高度活跃，此方法提供了轻量且有效的经验积累机制。",
+      "recommendation": "继续跟踪，等待开源实现与更广泛验证",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "ad55208f067fb11b6a51",
+      "title": "Claude has improved on a longstanding lower bound for the fraction of zeros of the Riemann zeta function that satisfy the Riemann hypothesis",
+      "url": "https://www.anthropic.com/research/riemann-zeta",
+      "source": "Anthropic",
+      "previously_sent": true,
+      "importance_score": 7.0,
+      "verdict": "仍属前沿",
+      "reassessment": "未发布Claude模型显著改进了黎曼猜想的相关界限，展示了AI在深度数学研究中的潜力。该成果经过专家验证，属于AI for Science的重要标志。",
+      "latest_context": "与本月安全领域的突破并列，显示前沿模型的能力广度。",
+      "recommendation": "继续跟踪该模型后续的发布和数学应用",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "d6b9f5e651b1891e950e",
+      "title": "Introducing GPT-6.1 Sol",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "source": "OpenAI",
+      "previously_sent": true,
+      "importance_score": 7.0,
+      "verdict": "仍属前沿",
+      "reassessment": "GPT-6.1 Sol以近Astra级智能和五分之一价格推出，显著降低前沿能力使用成本，属于主流模型的重要迭代。",
+      "latest_context": "结合Asana成本降低76倍的案例，该模型对产业成本结构有直接影响。",
+      "recommendation": "继续跟踪其采用和市场反馈",
+      "top_item": true,
+      "shown_in_digest": true
+    },
+    {
+      "id": "d0a8eada7cef3cd1cd98",
+      "title": "Validating the Comparison, Not Just the Scorer: Why Overall Accuracy Can Mislead in Interactive LLM Evaluation",
+      "url": "https://arxiv.org/abs/2610.31678",
+      "source": "arXiv cs.CL",
+      "previously_sent": true,
+      "importance_score": 6.0,
+      "verdict": "仍属前沿",
+      "reassessment": "该论文揭示交互式LLM评估中F1掩盖了prompt特定错误，导致效应量被夸大或误判。本月SWE-Duel等新兴动态基准也强调防止评估被操纵，该工作对建立可信评测基础设施仍然关键。",
+      "latest_context": "与本月出现的动态编码基准和自动化评测框架形成对照，方法论严谨性在评测中日益重要。",
+      "recommendation": "继续跟踪相关评估标准的采纳情况",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "7fdb639a795018181a7e",
+      "title": "Agent Lightning v1.0: A 3,500-Line Lightweight Agentic RL Framework for Training Agents with Real Harnesses",
+      "url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses",
+      "source": "Microsoft Research",
+      "previously_sent": true,
+      "importance_score": 6.0,
+      "verdict": "仍属前沿",
+      "reassessment": "Agent Lightning v1.0提供轻量级真实harness的Agent RL训练，并在SWE-bench上取得显著提升，是Agent训练基础设施的重要开源贡献。",
+      "latest_context": "本月多个研究（Phronix、Self-Direction）都在Agent学习上发力，此框架补充了训练侧基础设施。",
+      "recommendation": "继续跟踪其社区采用和后续版本",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "23d65be69b099d33638e",
+      "title": "SWE-Duel: Towards a Self-Scaling Arena for Coding Agents",
+      "url": "https://arxiv.org/abs/2610.12569",
+      "source": "arXiv cs.CL",
+      "previously_sent": true,
+      "importance_score": 6.0,
+      "verdict": "仍属前沿",
+      "reassessment": "SWE-Duel提出自我进化的编码Agent评估范式，通过对抗式任务生成避免数据泄漏和饱和，是对静态基准的显著改进。",
+      "latest_context": "与本月的评测批判论文（d0a8eada）形成呼应，动态评测的重要性正在显现。",
+      "recommendation": "继续跟踪该竞技场的扩展和采用",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "f515c352b2b1e0ca5293",
+      "title": "Know What You Don't Know: Agentic Data Synthesis by Evolving Generation Space for Closed-Loop Learning",
+      "url": "https://arxiv.org/abs/2610.12593",
+      "source": "arXiv cs.AI",
+      "previously_sent": true,
+      "importance_score": 6.0,
+      "verdict": "仍属前沿",
+      "reassessment": "EvoSyn通过多Agent反馈闭环演化合成数据空间，提升Agent任务成功率，解决了数据合成中的反馈-决策鸿沟。",
+      "latest_context": "与Phronix、Self-Direction共同推进Agent的持续学习和数据生成，是该方向的重要方法。",
+      "recommendation": "继续跟踪其在更多基准和实际系统中的应用",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "c38af6e5cae43e23a64c",
+      "title": "A model guide for the GPT-6 family",
+      "url": "https://openai.com/index/practical-guide-building-gpt-6",
+      "source": "OpenAI",
+      "previously_sent": true,
+      "importance_score": 6.0,
+      "verdict": "仍属前沿",
+      "reassessment": "GPT-6家族模型指南表明GPT-6已投入实际使用，且涉及推理努力调节、工具协调等，属于主流基础模型的重要发布。",
+      "latest_context": "结合GPT-6.1 Sol和Asana成本降低案例，GPT-6系列正在成为主流选择。",
+      "recommendation": "继续跟踪该家族模型的更新和用户反馈",
+      "top_item": true,
+      "shown_in_digest": true
+    },
+    {
+      "id": "10aa5736d8aab8b351ca",
+      "title": "Counterexample Generation via Per-Theorem Symbolic Verifiers: When Imitation Hurts and Reinforcement Repairs",
+      "url": "https://arxiv.org/abs/2610.02444",
+      "source": "arXiv cs.CL",
+      "previously_sent": true,
+      "importance_score": 6.0,
+      "verdict": "仍属前沿",
+      "reassessment": "该论文通过符号验证器和RLVR解决反例生成中的模仿陷阱，表明RL在数学推理中的关键作用，并展示了小模型超越大模型的潜力。",
+      "latest_context": "与本月基础设施（如Agent Lightning）和训练方法相结合，强化学习在小模型上的成功值得关注。",
+      "recommendation": "继续跟踪类似RLVR在数学和代码领域的应用",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "616afaf76617f3c859c8",
+      "title": "Choosing Before Acting: Comparative Value Estimation for Long-Horizon Tool-Use Agents",
+      "url": "https://arxiv.org/abs/2610.02330",
+      "source": "arXiv cs.AI",
+      "previously_sent": true,
+      "importance_score": 6.0,
+      "verdict": "仍属前沿",
+      "reassessment": "CITA提出对比价值估计以改善长程工具使用Agent的决策质量，在多个基准上提升成功率和工具F1，具有方法创新性。",
+      "latest_context": "与本月其他Agent学习工作（Phronix、Self-Direction）互补，专注于工具选择的价值估计。",
+      "recommendation": "继续跟踪，等待更多基准和开源验证",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "b1e455ad0dbc947472a5",
+      "title": "Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement",
+      "url": "https://www.microsoft.com/en-us/research/blog/introducing-care-x-towards-clinically-useful-radiology-vlms-with-auxiliary-supervision-reward-aligned-learning-and-tool-augmented-measurement",
+      "source": "Microsoft Research",
+      "previously_sent": false,
+      "importance_score": 6.0,
+      "verdict": "仍属前沿",
+      "reassessment": "CARE-X将强化学习、辅助监督和工具增强测量引入放射学VLM，在临床X光解读上展示改进，属于多模态医疗AI的重要进展。",
+      "latest_context": "虽然发布时间较早，但作为研究模型，其方法对多模态医疗AI具有前沿价值。",
+      "recommendation": "继续跟踪其后续验证和潜在产品化",
+      "top_item": false,
+      "shown_in_digest": false
+    },
+    {
+      "id": "be319d98e9e8716242c5",
+      "title": "Announcing new ways to customize models with SageMaker AI, without managing GPUs",
+      "url": "https://aws.amazon.com/blogs/machine-learning/announcing-new-ways-to-customize-models-with-sagemaker-ai-without-managing-gpus",
+      "source": "AWS Machine Learning",
+      "previously_sent": true,
+      "importance_score": 5.0,
+      "verdict": "重要但已常规",
+      "reassessment": "SageMaker无服务器定制功能使企业无需管理GPU即可进行后训练，降低了门槛，但本质是云服务的工程进步，而非算法突破。",
+      "latest_context": "与Microsoft Research的Agent Lightning和本月多个RL框架相比，属于基础设施普及，不具备前沿算法创新。",
+      "recommendation": "停止跟踪，若出现大规模采用或新功能再关注",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "6740e7536f61824993a7",
+      "title": "APDMem: Agent-Controlled Progressive Disclosure for Query-Adaptive Long-Term Memory",
+      "url": "https://arxiv.org/abs/2610.02472",
+      "source": "arXiv cs.CL",
+      "previously_sent": true,
+      "importance_score": 5.0,
+      "verdict": "仍属前沿",
+      "reassessment": "APDMem引入渐进式记忆披露，实现高效的长时记忆检索。虽为企业研究，但在长对话记忆架构上有创新。",
+      "latest_context": "与本月Agent记忆相关研究形成协同，且进展可扩展。",
+      "recommendation": "继续跟踪，关注其在生产助手中的应用",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "93e9efba216a968a8339",
+      "title": "DeepSeek-V4.1-Flash: Smarter, Faster, More Efficient",
+      "url": "https://api-docs.deepseek.com/news/news260910",
+      "source": "DeepSeek",
+      "previously_sent": true,
+      "importance_score": 5.0,
+      "verdict": "重要但已常规",
+      "reassessment": "DeepSeek-V4.1-Flash作为高效小模型，在成本性能上具竞争力，但属于常规迭代。",
+      "latest_context": "与GPT-6.1 Sol和Claude Haiku 5.5等同类高效模型相比，创新有限。",
+      "recommendation": "停止跟踪，除非出现重大能力跃升",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "b8a75fb67d8179220690",
+      "title": "Build more natural voice experiences with GPT‑Live‑1 in the API",
+      "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
+      "source": "OpenAI",
+      "previously_sent": true,
+      "importance_score": 5.0,
+      "verdict": "重要但已常规",
+      "reassessment": "GPT-Live-1改善API语音交互，但属于渐进式功能增强，不改变主要模型格局。",
+      "latest_context": "与Gemini 3.8 Live等语音模型相比，属于常规更新。",
+      "recommendation": "停止跟踪",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "6aae488b1bb65e59bc91",
+      "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+      "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking",
+      "source": "Google DeepMind",
+      "previously_sent": true,
+      "importance_score": 5.0,
+      "verdict": "重要但已常规",
+      "reassessment": "Gemini 3.8 Live提升了语音模型的推理和并发能力，但是渐进式改进，未改变语音交互基本范式。",
+      "latest_context": "与Gemini 4系列相比，3.8 Live属于上一代产品。",
+      "recommendation": "停止跟踪",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "9bf93d58cc35db9987f8",
+      "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+      "url": "https://openai.com/index/asana-browser-agent",
+      "source": "OpenAI",
+      "previously_sent": false,
+      "importance_score": 5.0,
+      "verdict": "重要但已常规",
+      "reassessment": "Asana利用GPT-6.1 Sol大幅降低浏览器Agent成本并提速，属于成功的商业应用案例，但非技术突破。",
+      "latest_context": "作为GPT-6.1 Sol的客户案例，证明其性价比优势，但缺乏新知识。",
+      "recommendation": "停止跟踪",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "8303b0c207ffaa69706b",
+      "title": "Introducing Claude Haiku 5.5 on AWS",
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-haiku-5-5-on-aws",
+      "source": "AWS Machine Learning",
+      "previously_sent": false,
+      "importance_score": 5.0,
+      "verdict": "重要但已常规",
+      "reassessment": "Claude Haiku 5.5在AWS上推出，强调效率和成本降低，属于Anthropic的常规高效模型迭代。",
+      "latest_context": "与本届其他高效模型（GPT-6.1 Sol、DeepSeek Flash）类似，重要性中等。",
+      "recommendation": "停止跟踪",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "d8885d98544ba54844d4",
+      "title": "ReviewBench: An open benchmark for AI code review",
+      "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review",
+      "source": "GitHub AI & ML",
+      "previously_sent": true,
+      "importance_score": 4.0,
+      "verdict": "重要但已常规",
+      "reassessment": "GitHub发布的代码审查基准虽有助于统一评测，但缺乏根本性创新，属于工程贡献。",
+      "latest_context": "与SWE-Duel等动态基准相比，ReviewBench仍是静态基准。",
+      "recommendation": "停止跟踪",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "28e7ba2670cd654fe2e5",
+      "title": "Rethinking access control for RAG with Amazon Quick and Amazon Bedrock",
+      "url": "https://aws.amazon.com/blogs/machine-learning/rethinking-access-control-for-rag-with-amazon-quick-and-amazon-bedrock",
+      "source": "AWS Machine Learning",
+      "previously_sent": true,
+      "importance_score": 4.0,
+      "verdict": "重要但已常规",
+      "reassessment": "AWS关于RAG访问控制的文章展示企业级实现，但属于指南性质，无创新。",
+      "latest_context": "与本月其他RAG相关研究（APDMem）相比，该文主要聚焦部署实践。",
+      "recommendation": "停止跟踪",
+      "top_item": false,
+      "shown_in_digest": true
+    },
+    {
+      "id": "813f4b8521bddb77fa64",
+      "title": "Fine-tune a search agent with multi-turn RL on Amazon SageMaker AI",
+      "url": "https://aws.amazon.com/blogs/machine-learning/fine-tune-a-search-agent-with-multi-turn-rl-on-amazon-sagemaker-ai",
+      "source": "AWS Machine Learning",
+      "previously_sent": true,
+      "importance_score": 4.0,
+      "verdict": "重要但已常规",
+      "reassessment": "AWS提供多轮RL微调搜索代理的教程，属于SageMaker功能的推广应用。",
+      "latest_context": "与SageMaker无服务器定制和Agent Lightning相比，此文章是具体实现指南。",
+      "recommendation": "停止跟踪",
+      "top_item": false,
+      "shown_in_digest": true
+    }
+  ],
+  "monthly_news_ranking": [
+    {
+      "id": "f4efc55098543f59e5e3",
+      "title": "Enabling independent research on how people use Claude",
+      "source": "Anthropic",
+      "score": 5.0,
+      "reason": "外部研究者用隐私保护工具分析Claude真实使用数据的试点，方法有参考价值但缺技术细节。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "2ef1fbc3458e029d755f",
+      "title": "Discovering and exploiting vulnerabilities in critical, real-world software with Claude",
+      "source": "Anthropic",
+      "score": 8.5,
+      "reason": "Anthropic内部研究模型发现真实软件高危漏洞并披露五条攻击链，技术前沿性与安全价值高，与模型能力兴趣相关。",
+      "local_duplicate": false,
+      "selected_for_review": true
+    },
+    {
+      "id": "a9914f0c8b63a36e5e70",
+      "title": "Claude Code Best Practices",
+      "source": "Anthropic",
+      "score": 7.0,
+      "reason": "Claude Code跨代码库实战最佳实践，直接契合AI编程与工具使用兴趣，摘要简略但主题精准。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "550f4d88633d42452645",
+      "title": "Expanding our partnership with GSA to bring Claude to all levels of government",
+      "source": "Anthropic",
+      "score": 3.0,
+      "reason": "政府合作属商业与政策动态，摘要无技术内容，与用户兴趣关联低。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "85f94c0fe8f02a81789b",
+      "title": "Credit Saison achieves 954% ROI in a ChatGPT Enterprise pilot",
+      "source": "OpenAI",
+      "score": 3.0,
+      "reason": "ChatGPT 企业试点 ROI 案例，属产品宣传型内容，缺乏技术细节。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "dcad83d827337ce853e7",
+      "title": "Early progress on accelerating drug development with Claude",
+      "source": "Anthropic",
+      "score": 5.5,
+      "reason": "Claude加速药物研发的进展更新，有应用价值但摘要缺具体方法与技术细节。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "3e32bae570ff21ee59e5",
+      "title": "Gemini 4 Carbon: Our next frontier model",
+      "source": "Google DeepMind",
+      "score": 7.0,
+      "reason": "Gemini新前沿模型发布，高度契合主流模型版本跟踪兴趣，但摘要为空，能力变化无法评估。",
+      "local_duplicate": false,
+      "selected_for_review": true
+    },
+    {
+      "id": "73e86071f981e7f05e2d",
+      "title": "Claude discovers a novel enzyme system",
+      "source": "Anthropic",
+      "score": 7.0,
+      "reason": "Claude Agent在生命科学实验室发现未知功能酶系统，体现Agent科研能力，早期结果细节有限。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "c417f8e3d39d0b893c07",
+      "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+      "source": "OpenAI",
+      "score": 4.0,
+      "reason": "OpenAI与Oracle合作将业务应用与Agent接入ChatGPT，偏商业动态，技术细节少。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "a9c488820a62ac4adcd9",
+      "title": "Greptile takes bug detection beyond code review with GPT-6 Astra",
+      "source": "OpenAI",
+      "score": 6.0,
+      "reason": "Greptile用GPT-6 Astra做工作流测试、安全强化与减返工，属AI编程应用案例，含一定技术做法。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "7d972df501d01ba1f64a",
+      "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
+      "source": "OpenAI",
+      "score": 6.0,
+      "reason": "CodeRabbit用GPT-6.1 Sol构建安全Agent审查复杂代码库，契合AI编程，但偏厂商案例。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "27334100e818b98514ff",
+      "title": "ChatGPT’s expanding world of work",
+      "source": "OpenAI",
+      "score": 3.5,
+      "reason": "ChatGPT工作用途跨国使用数据分析报告，与模型技术兴趣相关性低，无技术贡献。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "35e334c198740f741663",
+      "title": "Introducing GPT-6.1 Terra",
+      "source": "OpenAI",
+      "score": 5.0,
+      "reason": "标题指向GPT-6.1 Terra发布、主打计算机使用，但摘要仅一句无技术细节，信息量不足。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "ca353886f18b23010ffc",
+      "title": "Reverse engineering Claude's CVE-2026-2796 exploit",
+      "source": "Anthropic",
+      "score": 7.5,
+      "reason": "官方深度披露Claude为自找Firefox漏洞编写利用代码，技术细节较丰富，与AI编程和安全能力相关。",
+      "local_duplicate": false,
+      "selected_for_review": true
+    },
+    {
+      "id": "0b1dcee4cb5d7740eb81",
+      "title": "Claude does cyber competitions",
+      "source": "Anthropic",
+      "score": 6.0,
+      "reason": "Claude参与人类网络安全竞赛常进前25%，属能力评测实践，有参考价值但摘要简略。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "ee4c22366ef7e7abd786",
+      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+      "source": "OpenAI",
+      "score": 6.0,
+      "reason": "OpenAI存储扩容实践含多租户、全球缓存与读提速12倍，与推理部署基础设施相关，非模型创新。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "3b5a2a6a27ab5490f80a",
+      "title": "Anima helps clinics cut call waits by 75% with GPT-6 and GPT-Live",
+      "source": "OpenAI",
+      "score": 3.0,
+      "reason": "诊所使用GPT-6与GPT-Live的客户案例，偏产品宣传，缺乏技术细节，前沿性与创新性低。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "eda525050cea8fce4b13",
+      "title": "Uber brings ChatGPT Work to all employees with OpenAI",
+      "source": "OpenAI",
+      "score": 3.0,
+      "reason": "Uber全员部署ChatGPT Work的企业新闻，属产品推广，无技术方法或评测细节，信息价值低。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "8d6665ab69ee0937415c",
+      "title": "DeepSeek-V4.1-Flash-1017: Wish-Driven Programming Made Real",
+      "source": "DeepSeek",
+      "score": 5.0,
+      "reason": "DeepSeek新版本发布且标题暗示编程方向，但摘要为口号式宣传，缺能力与技术细节。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "1dc99b611b2499a3b881",
+      "title": "Developing Gemini 4 Argon responsibly and safely",
+      "source": "Google DeepMind",
+      "score": 5.0,
+      "reason": "Gemini 4安全开发官方博客，主题相关但摘要为空，无法判断技术含量，可信来源给中等分。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "d96a2391b623b2cb26cc",
+      "title": "Gemini 4 Argon for Robotics",
+      "source": "Google DeepMind",
+      "score": 5.0,
+      "reason": "Gemini 4机器人方向官方发布，主题有前沿性，但摘要为空，缺乏可评估的技术细节。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "ed1be8ea5f53c7373a9c",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "source": "Google AI",
+      "score": 5.0,
+      "reason": "Gemini 4 Argon主发布属高关注版本，但摘要为TBD无实质内容，暂给中等分。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "72c805579f21b6e81058",
+      "title": "Introducing Claude Corps",
+      "source": "Anthropic",
+      "score": 2.0,
+      "reason": "Claude Corps为人才培养fellowship项目，非技术内容，与模型技术兴趣相关性低。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "4d1871c0e2f96e266ba7",
+      "title": "Using Claude Science to produce the first complete map of the sky in UV light",
+      "source": "Anthropic",
+      "score": 4.0,
+      "reason": "Claude Science助力完成首个紫外全天图，属应用案例，摘要简略且与核心技术方法关联弱。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "9bf93d58cc35db9987f8",
+      "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+      "source": "OpenAI",
+      "score": 7.5,
+      "reason": "Asana用新模型将浏览器Agent成本降76倍、提速5倍，属Agent部署优化实践，但摘要缺具体技术手段。",
+      "local_duplicate": false,
+      "selected_for_review": true
+    },
+    {
+      "id": "c4a1f46e5a98744a7c57",
+      "title": "Introducing the Anthropic Cyber Mission",
+      "source": "Anthropic",
+      "score": 2.0,
+      "reason": "仅安全使命介绍，无技术细节，与用户兴趣相关度低。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "db7b9e6fe248e3146f87",
+      "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
+      "source": "OpenAI",
+      "score": 4.0,
+      "reason": "Codex企业工作流案例，有实践参考价值，但属客户案例宣传，技术细节不足。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "e04d1da693503b0f1282",
+      "title": "Introducing Playground: Create and play custom games",
+      "source": "Google AI",
+      "score": 1.0,
+      "reason": "摘要仅'Overview of Playground'，信息严重不足，无法判断技术内容。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "bfc4355d370530a85bd8",
+      "title": "Claude Frontier Academy: $100M to train 10,000 engineers",
+      "source": "Anthropic",
+      "score": 2.0,
+      "reason": "培训项目与资金承诺，非技术内容，与模型技术兴趣相关度低。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "0a1a9915f1bf1a416043",
+      "title": "Claude-shaped science",
+      "source": "Anthropic",
+      "score": 4.0,
+      "reason": "Claude辅助科学计算的案例分析，有应用价值但偏个人叙事，缺方法细节。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "c08402b8f22a4b159df3",
+      "title": "Barclays scales Claude to upgrade operations and improve client experience",
+      "source": "Anthropic",
+      "score": 3.0,
+      "reason": "银行企业级AI集成宣传，无技术细节，属客户案例。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "2167384f51e2a4466793",
+      "title": "The Den frees up 10-15 hours a week to grow with ChatGPT Work",
+      "source": "OpenAI",
+      "score": 2.0,
+      "reason": "ChatGPT Work客户效率案例，纯宣传性质，无技术信息。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "08aa8115cb5d9c892099",
+      "title": "Introducing SynthID Bio",
+      "source": "Google DeepMind",
+      "score": 6.0,
+      "reason": "SynthID Bio为AI生成蛋白质加水印且保功能，属新方法探索，前沿性好但摘要偏简。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "7ee79eecb360c6d0bfd2",
+      "title": "Introducing Quine: An AI research system designed for the complexity of biology",
+      "source": "Microsoft Research",
+      "score": 6.5,
+      "reason": "微软Quine面向生物学的多模态世界模型研究系统，前沿性强，但处早期阶段、技术细节有限。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "dbe42569b9cac6f135ab",
+      "title": "How Claude's values vary by model and language",
+      "source": "Anthropic",
+      "score": 7.0,
+      "reason": "30万真实对话量化模型价值观跨模型跨语言差异，方法具体，属对齐评测实证研究。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "b1e455ad0dbc947472a5",
+      "title": "Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement",
+      "source": "Microsoft Research",
+      "score": 7.0,
+      "reason": "放射科VLM融合辅助监督、奖励对齐与工具增强测量，涉及多模态、对齐与工具调用，技术性强。",
+      "local_duplicate": false,
+      "selected_for_review": true
+    },
+    {
+      "id": "30feb7a6b056dc5f2e38",
+      "title": "Configure the ChatGPT desktop app with Amazon Bedrock in AWS GovCloud (US)",
+      "source": "AWS Machine Learning",
+      "score": 4.0,
+      "reason": "ChatGPT桌面版在AWS GovCloud的受控部署配置说明，偏合规教程，无模型能力变化信息。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "6394645bd5105adc5435",
+      "title": "Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms",
+      "source": "Hugging Face Community",
+      "score": 2.5,
+      "reason": "无摘要，仅标题提及Apple平台语音与决策开源模型，技术细节不足，难以评估前沿性。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "39052ad94a8a76cc68a2",
+      "title": "Apertus 1.5 Release Notes",
+      "source": "Hugging Face Community",
+      "score": 2.0,
+      "reason": "仅版本发布说明标题且无摘要，无法判断模型能力与技术创新点，信息价值低。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "8303b0c207ffaa69706b",
+      "title": "Introducing Claude Haiku 5.5 on AWS",
+      "source": "AWS Machine Learning",
+      "score": 7.0,
+      "reason": "Claude Haiku 5.5上线AWS，主打速度与成本并降约75%，对主流模型版本跟踪有价值，属部署信息。",
+      "local_duplicate": false,
+      "selected_for_review": true
+    },
+    {
+      "id": "16b7810afb00bdc03cf9",
+      "title": "Introducing Falcon ASR",
+      "source": "Hugging Face Community",
+      "score": 2.0,
+      "reason": "摘要未提供模型内容，仅称已评估复盘，缺技术细节，信息价值低。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "236dbb8238cdf6251187",
+      "title": "Add secure Web Search to Claude Desktop with Amazon Bedrock AgentCore",
+      "source": "AWS Machine Learning",
+      "score": 5.0,
+      "reason": "Claude Desktop经AgentCore网关接入Web Search并含JWT认证，属工具调用工程实践，前沿性一般。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "2a26e0bf4bcecd1520a4",
+      "title": "Deploying real-time personalized speech with Qwen3-TTS on Amazon SageMaker AI",
+      "source": "AWS Machine Learning",
+      "score": 6.0,
+      "reason": "Qwen3-TTS在SageMaker实时部署并支持跨语种声音克隆，有实际部署价值，属多模态工程实践。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "689d78c6e007ab8e2c4f",
+      "title": "Transformers now runs llama.cpp quants",
+      "source": "Hugging Face Community",
+      "score": 3.5,
+      "reason": "标题涉及Transformers支持llama.cpp量化，与量化部署相关，但摘要为复盘说明缺技术细节。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "a76463269fe24214350f",
+      "title": "Scaling Managed Agents with stable interfaces",
+      "source": "Anthropic",
+      "score": 6.0,
+      "reason": "Anthropic谈Managed Agents以稳定接口应对harness过时，对Agent架构有参考价值，但偏设计理念。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "bafa68df361fc999449e",
+      "title": "From synthetic enterprise data evaluations to real Microsoft Copilot AI confidence",
+      "source": "Microsoft Research",
+      "score": 5.5,
+      "reason": "用合成企业数据评测Copilot置信度，属评测方法创新，但摘要偏介绍性、细节有限。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "84abd1857de5dfd951d9",
+      "title": "Making it easier for websites to express AI training preferences",
+      "source": "OpenAI",
+      "score": 3.0,
+      "reason": "OpenAI遵守robots.txt训练偏好信号，属政策动态，技术前沿性与模型相关性低。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    },
+    {
+      "id": "a86d24c59c826150d16d",
+      "title": "Community safety report and new protections for teens",
+      "source": "OpenAI",
+      "score": 2.0,
+      "reason": "青少年安全与社区报告，属产品安全政策，与用户技术兴趣相关性低。",
+      "local_duplicate": false,
+      "selected_for_review": false
+    }
+  ]
+}

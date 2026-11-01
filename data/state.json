@@ -1,7 +1,7 @@
 {
   "version": 3,
   "last_success_at": "2026-10-26T04:51:36.035948+00:00",
-  "last_monthly_success_at": "2026-10-01T07:11:21.708735+00:00",
+  "last_monthly_success_at": "2026-11-01T07:31:59.691718+00:00",
   "pending_delivery": null,
   "items": {
     "fe44f961306e2acba1b6": {
@@ -4070,7 +4070,7 @@
       "published_at": "2026-08-11T16:00:00+00:00",
       "summary": "Radiology AI is evolving beyond report generation. CARE-X explores a unified approach that combines flexible reasoning, calibrated predictions, and measurement-based tools for chest X-ray interpretation. The post Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement appeared first on Microsoft Research .",
       "selected": false,
-      "processed_at": "2026-10-01T07:11:21.708735+00:00",
+      "processed_at": "2026-11-01T07:31:59.691718+00:00",
       "digest_kind": "monthly"
     },
     "f2323421e5e51bb84aa7": {
@@ -10636,9 +10636,9 @@
       "source_category": "官方动态",
       "published_at": "2026-10-09T07:00:00+00:00",
       "summary": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
-      "selected": false,
-      "processed_at": "2026-10-12T06:02:36.624911+00:00",
-      "digest_kind": "weekly"
+      "selected": true,
+      "processed_at": "2026-11-01T07:31:59.691718+00:00",
+      "digest_kind": "monthly"
     },
     "983129a3016b1868b983": {
       "title": "Building Reliable Data Analytics Agents: Lessons from the KDD Cup",
@@ -10988,9 +10988,9 @@
       "source_category": "工程与部署",
       "published_at": "2026-10-07T18:52:10+00:00",
       "summary": "Claude Haiku 5.5 is now available on Amazon Bedrock and Claude Platform on AWS. According to Anthropic, it is the fastest, most efficient model in the Claude 5.5 family, built for subagents and high-volume, cost-sensitive work, and costs around 75% less than Claude Haiku 4.5 for most tasks. This post covers its improvements and how to get started.",
-      "selected": false,
-      "processed_at": "2026-10-12T06:02:36.624911+00:00",
-      "digest_kind": "weekly"
+      "selected": true,
+      "processed_at": "2026-11-01T07:31:59.691718+00:00",
+      "digest_kind": "monthly"
     },
     "3b31c130485ad58e87a4": {
       "title": "Scaling Decision Optimization to 100 Million Variables and Beyond with mPDLP in NVIDIA cuOpt",
@@ -12000,9 +12000,9 @@
       "source_category": "官方动态",
       "published_at": "2026-10-23T20:56:37+00:00",
       "summary": "This post dives deep into how Claude wrote an exploit for one of the vulnerabilities it found in Firefox.",
-      "selected": false,
-      "processed_at": "2026-10-26T04:51:36.035948+00:00",
-      "digest_kind": "weekly"
+      "selected": true,
+      "processed_at": "2026-11-01T07:31:59.691718+00:00",
+      "digest_kind": "monthly"
     },
     "51a8b9803784fc1a8b35": {
       "title": "How IskayPet unified corporate knowledge with Amazon Bedrock Managed Knowledge Bases",
@@ -12146,6 +12146,28 @@
       "selected": false,
       "processed_at": "2026-10-26T04:51:36.035948+00:00",
       "digest_kind": "weekly"
+    },
+    "2ef1fbc3458e029d755f": {
+      "title": "Discovering and exploiting vulnerabilities in critical, real-world software with Claude",
+      "url": "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude",
+      "source": "Anthropic",
+      "source_category": "官方动态",
+      "published_at": "2026-10-30T15:24:16+00:00",
+      "summary": "Over the past few months, we’ve used an unreleased, internal research model to find critical vulnerabilities in some of the world’s most widely used software, such as browsers and operating systems. In this post, we share details of five attack chains, which led to remote code execution and other critical impacts with little to no user interaction.",
+      "selected": true,
+      "processed_at": "2026-11-01T07:31:59.691718+00:00",
+      "digest_kind": "monthly"
+    },
+    "3e32bae570ff21ee59e5": {
+      "title": "Gemini 4 Carbon: Our next frontier model",
+      "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model",
+      "source": "Google DeepMind",
+      "source_category": "官方动态",
+      "published_at": "2026-10-28T17:00:58+00:00",
+      "summary": "",
+      "selected": true,
+      "processed_at": "2026-11-01T07:31:59.691718+00:00",
+      "digest_kind": "monthly"
     }
   }
 }
